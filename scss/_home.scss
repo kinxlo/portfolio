@@ -8,7 +8,7 @@ body {
     .section-one {
         // border: 1px solid blue;
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         flex: 1;
         background-color: $background-color-dark;
@@ -221,7 +221,7 @@ body {
             // border: 1px solid red;
             width: 100%;
             max-width: 900px;
-            margin: 0 auto 1rem auto;
+            margin: 1rem auto;
             display: flex;
             // flex-direction: row-reverse;
             justify-content: space-between;
@@ -377,6 +377,7 @@ body {
                 p {
                     text-align: justify;
                     padding: 0 7rem;
+                    margin-top: 1.5rem;
                     width: 30rem;
                     font-size: 10px;
                     line-height: 1.5em;
