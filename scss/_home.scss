@@ -57,26 +57,12 @@ body {
                     font-family: 'Montserrat', sans-serif;
                     cursor: pointer;
                 }
-            }
 
-            .nav-menu.active{
-                border: 1px solid red;
-                display: flex;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 999;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                background-color: #000;
-
-                li{
-                    margin: 5rem 0;
+                .active {
+                    color: $g-accent-color-1;
                 }
             }
+
 
             .hamburger-menu a {
                 font-size: $lg-length-1;
@@ -94,7 +80,7 @@ body {
             overflow-x: hidden;
             overflow-y: auto;
 
-            .main-container{
+            .main-container {
                 // border: 1px solid red;
                 width: 100%;
                 height: 100%;
@@ -204,14 +190,15 @@ body {
             }
         }
 
-        .social-section{
+        .social-section {
+
             // border: 1px solid red;
             // margin-top: -3rem;
-            .socials{
+            .socials {
                 display: flex;
                 justify-content: space-evenly;
 
-                i{
+                i {
                     font-size: large;
                 }
             }
@@ -337,7 +324,7 @@ body {
             flex-direction: column;
             // justify-content: space-around;
             width: 100%;
-            
+
 
             .me {
                 position: relative;
@@ -355,7 +342,7 @@ body {
                     left: 50px;
                     width: 10%;
                     z-index: 5;
-                    display:none;
+                    display: none;
                 }
 
 
@@ -409,7 +396,7 @@ body {
                     grid-gap: 20px;
                     grid-row-gap: 50px;
                     padding: 1rem;
-                    
+
                     .service-banner {
                         position: relative;
                         display: flex;
@@ -475,61 +462,68 @@ body {
                         top: 0;
                         left: 0;
                         color: $g-accent-color-1;
+                        // transform: scale(0.8);
+                    }
+
+                    .behind{
+                        color: #008000;
+                        transform: scale(0.8);
+                        filter: opacity(0.5);
                     }
 
                     .html {
-                        top: 13rem;
-                        left: 1rem
+                        top: 61%;
+                        left: 3%;
                     }
 
                     .css {
-                        top: 13rem;
-                        left: 18rem;
+                        top: 74%;
+                        left: 92%;
                     }
 
                     .js {
-                        top: 12rem;
-                        left: 8rem;
-                    }
-
-                    .react {
-                        top: 0;
-                        left: 9rem;
-                    }
-
-                    .git {
-                        top: 6rem;
-                        left: 0;
-                    }
-
-                    .bs {
-                        top: 6rem;
-                        left: 15rem;
-                    }
-
-                    .json {
-                        top: 19rem;
-                        left: 0;
+                        top: 49%;
+                        left: 35%;
                     }
 
                     .sass {
-                        top: 19rem;
-                        left: 18rem;
+                        top: 60%;
+                        left: 61%;
+                    }
+
+                    .git {
+                        top: 31%;
+                        left: 35%;
+                    }
+
+                    .bs {
+                        top: 23%;
+                        left: 60%;
+                    }
+
+                    .json {
+                        top: 43%;
+                        left: 0;
+                    }
+
+                    .react {
+                        top: 45%;
+                        left: 85%;
                     }
 
                     .node {
-                        top: 21rem;
-                        left: 8rem;
+                        top: 19%;
+                        left: 15%;
                     }
 
                     .gsap {
-                        top: 5rem;
-                        left: 7rem;
+                        top: 35%;
+                        left: 61%;
                     }
 
                     .java {
-                        top: 25rem;
-                        left: 9rem;
+                        top: 73%;
+                        left: 20%;
                     }
                 }
             }

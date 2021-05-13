@@ -1,12 +1,9 @@
 // this is the dynamic content for each link or list item
 // about,
 // contact,
-// Skills.
-const about = document.querySelector('.about')
-const contact = document.querySelector('.contact')
-const skills = document.querySelector('.skills')
+// skill
+const navLists = document.querySelectorAll('.nav-menu li')
 const projects = document.querySelector('.project')
-
 const sectionTwo = document.querySelector('.section-two')
 const skillDescription = document.querySelector('.skill-description')
 
@@ -43,8 +40,9 @@ function getCodeTime() {
   days = Math.floor(timeDiff / 24)
 
   //display the time on the browser
-  dateElement.textContent = `${days} days : ${hours} hours : ${mins} mins : ${seconds} sec`
+  dateElement.textContent = `${days} days : ${hours} hours : ${mins} mins`
 }
+
 // display clock in real time.
 setInterval(() => {
   getCodeTime()
@@ -188,17 +186,17 @@ const SKILLS = `
             <div class = "skills-screen">
                 <div class = "circle-div">
                     <div class = "circle">
-                        <h3 class = "html">HTML 5</h3>
-                        <h3 class = "css">CSS</h3>
-                        <h3 class = "js">JAVASCRIPT</h3>
-                        <h3 class = "react">REACT</h3>
-                        <h3 class = "git">GIT</h3>
-                        <h3 class = "bs">BOOTSTRAP</h3>
-                        <h3 class = "json">JSON</h3>
-                        <h3 class = "sass">SASS</h3>
-                        <h3 class = "node">NODE.JS</h3>
-                        <h3 class = "gsap">GSAP</h3>
-                        <h3 class = "java">JAVA</h3>
+                        <h3 class = "html  foward">HTML 5</h3>
+                        <h3 class = "css  foward">CSS</h3>
+                        <h3 class = "js  foward">JAVASCRIPT</h3>
+                        <h3 class = "react foward">REACT</h3>
+                        <h3 class = "git foward">GIT</h3>
+                        <h3 class = "bs foward">BOOTSTRAP</h3>
+                        <h3 class = "json behind ">JSON</h3>
+                        <h3 class = "sass behind">SASS</h3>
+                        <h3 class = "node behind">NODE.JS</h3>
+                        <h3 class = "gsap behind">GSAP</h3>
+                        <h3 class = "java behind">JAVA</h3>
                     </div>
                 </div>
 
@@ -226,20 +224,32 @@ function removeSkillDescription() {
 //=============
 // PAGE DISPLAY
 // ============
-
-//display the about me page
-about.addEventListener('click', () => {
-  display(ABOUT)
-  removeSkillDescription()
+navLists.forEach((nav) => {
+  nav.addEventListener('click', () => {
+    if (nav.className == 'about') {
+      display(ABOUT)
+      removeSkillDescription()
+    } else if (nav.className == 'contact') {
+      display(CONTACT)
+      removeSkillDescription()
+    } else if (nav.className == 'skills') {
+      display(SKILLS)
+      showSkillDescription()
+    }
+  })
 })
 
-// display the home page
-contact.addEventListener('click', () => {
-  display(CONTACT)
-  removeSkillDescription()
-})
+// Loop through the nav lists and add the active class to the current/clicked list
+for (var i = 0; i < navLists.length; i++) {
+  navLists[i].addEventListener('click', function () {
+    let current = document.getElementsByClassName('active')
 
-skills.addEventListener('click', () => {
-  display(SKILLS)
-  showSkillDescription()
-})
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(' active', '')
+    }
+
+    // Add the active class to the current/clicked list
+    this.className += ' active'
+  })
+}

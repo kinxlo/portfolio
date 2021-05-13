@@ -117,32 +117,8 @@ body .section-one .nav-container .nav-menu li {
   cursor: pointer;
 }
 
-body .section-one .nav-container .nav-menu.active {
-  border: 1px solid red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 999;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #000;
-}
-
-body .section-one .nav-container .nav-menu.active li {
-  margin: 5rem 0;
+body .section-one .nav-container .nav-menu .active {
+  color: #61892f;
 }
 
 body .section-one .nav-container .hamburger-menu a {
@@ -556,59 +532,67 @@ body .section-one .skills-screen .circle-div .circle h3 {
   color: #61892f;
 }
 
+body .section-one .skills-screen .circle-div .circle .behind {
+  color: #008000;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+}
+
 body .section-one .skills-screen .circle-div .circle .html {
-  top: 13rem;
-  left: 1rem;
+  top: 61%;
+  left: 3%;
 }
 
 body .section-one .skills-screen .circle-div .circle .css {
-  top: 13rem;
-  left: 18rem;
+  top: 74%;
+  left: 92%;
 }
 
 body .section-one .skills-screen .circle-div .circle .js {
-  top: 12rem;
-  left: 8rem;
-}
-
-body .section-one .skills-screen .circle-div .circle .react {
-  top: 0;
-  left: 9rem;
-}
-
-body .section-one .skills-screen .circle-div .circle .git {
-  top: 6rem;
-  left: 0;
-}
-
-body .section-one .skills-screen .circle-div .circle .bs {
-  top: 6rem;
-  left: 15rem;
-}
-
-body .section-one .skills-screen .circle-div .circle .json {
-  top: 19rem;
-  left: 0;
+  top: 49%;
+  left: 35%;
 }
 
 body .section-one .skills-screen .circle-div .circle .sass {
-  top: 19rem;
-  left: 18rem;
+  top: 60%;
+  left: 61%;
+}
+
+body .section-one .skills-screen .circle-div .circle .git {
+  top: 31%;
+  left: 35%;
+}
+
+body .section-one .skills-screen .circle-div .circle .bs {
+  top: 23%;
+  left: 60%;
+}
+
+body .section-one .skills-screen .circle-div .circle .json {
+  top: 43%;
+  left: 0;
+}
+
+body .section-one .skills-screen .circle-div .circle .react {
+  top: 45%;
+  left: 85%;
 }
 
 body .section-one .skills-screen .circle-div .circle .node {
-  top: 21rem;
-  left: 8rem;
+  top: 19%;
+  left: 15%;
 }
 
 body .section-one .skills-screen .circle-div .circle .gsap {
-  top: 5rem;
-  left: 7rem;
+  top: 35%;
+  left: 61%;
 }
 
 body .section-one .skills-screen .circle-div .circle .java {
-  top: 25rem;
-  left: 9rem;
+  top: 73%;
+  left: 20%;
 }
 
 body .section-two {
