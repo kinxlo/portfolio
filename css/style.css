@@ -265,6 +265,8 @@ body .section-one .screen .CTA {
   font-size: 12px;
   padding: 1rem;
   background-color: #61892f;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 body .section-one .screen .CTA i {
