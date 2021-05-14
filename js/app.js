@@ -81,32 +81,93 @@ const Skills = {
 // html strings
 
 const HOME = `
-<div class="main-text introduction">
-    <div class="jumbo-name">
-        <div>
-            <h6>Hi, i'm</h6>
-            <div class="name">
-                <div>
-                    <h1>Ifijeh 'kinxlo'</h1>
+<div class="main-container">
+                <!-- INTRODUCTION -->
+                <div class="main-text introduction">
+                    <div class="border">
+                        <small>&lt;body&gt;</small>
+                        <div style="padding-left:1rem">
+                            <div class="">
+                                <div>
+                                    <small>&lt;p&gt;</small>
+                                    <h6 style="padding-left:1rem">Hello!, i'm</h6>
+                                    <small>&lt;/p&gt;</small>
+                                    <div class="name jumbo-name">
+                                        <small id="small">&lt;h1&gt;</small>
+                                        <div style="padding-left:1rem">
+                                            <div>
+                                                <h1>Kingsley</h1>
+                                            </div>
+                                            <div class="second-name">
+                                                <h1>Solomon</h1>
+                                                <!-- <div class="hyphen"></div> -->
+                                            </div>
+                                        </div>
+                                        <small id="small">&lt;/h1&gt;</small>
+                                    </div>
+                                    <small>&lt;p&gt;</small>
+                                    <h6 style="padding-left:1rem">your</h6>
+                                    <small>&lt;/p&gt;</small>
+                                </div>
+                            </div>
+                            <div class="jumbo-text">
+                                <small>&lt;h6&gt;</small>
+                                <p style="padding-left:1rem">
+                                    Frontend Developer / <br> Instructor
+                                </p>
+                                <small>&lt;/h6&gt;</small>
+                            </div>
+                        </div>
+                        <small>&lt;/body&gt;</small>
+                        <div class="CTA">
+                            <a href="#">view My works<i class="lni lni-arrow-left bx-fade-left"></i></a>
+                            <div class="line"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="second-name">
-                    <h1>Solomon</h1>
-                    <!-- <div class="hyphen"></div> -->
-                </div>
-            </div>
-            <h6>your</h6>
-        </div>
-    </div>
-    <div class="jumbo-text">
-        <p>
-            Frontend Developer / Web Developer
-        </p>
-    </div>
-    <div class="CTA">
-        <a href="#">view My works<i class="lni lni-arrow-left bx-fade-left"></i></a>
-        <div class="line"></div>
-    </div>
-</div>`
+                <!-- END OF INTRODUCTION -->
+
+                <!-- THE FORM DISPLAY -->
+                <!-- END OF FORM DISPLAY -->
+
+                <!-- ABOUT DISPLAY -->
+                <!-- END OF ABOUT DISPLAY -->
+
+                <!-- SKILL SDISPLAY -->
+                <!-- END OF SKILL DISPLAY -->
+
+                <section class="social-section">
+                    <div class="socials">
+                        <div>
+                            <a href="https://www.linkedin.com/in/kingsley-solomon-b90339b2/"><img
+                                    src="https://img.icons8.com/fluent-systems-filled/18/f5f5f5/linkedin.png"
+                                     /></a>
+                        </div>
+                        <div>
+                            <a href="mailto:kinxly@gmail.com"><img
+                                    src="https://img.icons8.com/fluent-systems-filled/18/f5f5f5/google-logo.png"
+                                     /></a>
+                        </div>
+                        <div>
+                            <a href="https://github.com/kinxlo"><img
+                                    src="https://img.icons8.com/material/18/f5f5f5/github.png"  /></a>
+                        </div>
+                        <!-- <div>
+                    <a href=""><i class='bx bxl-facebook'></i></a>
+                </div> -->
+
+                        <div>
+                            <a href="tel:+2348100792853"><img
+                                    src="https://img.icons8.com/fluent-systems-filled/18/f5f5f5/outgoing-call.png"
+                                    /></a>
+                        </div>
+                        <!-- <div>
+                            <a href=""><img
+                                    src="https://img.icons8.com/fluent-systems-filled/18/f5f5f5/twitter.png" /></a>
+                        </div> -->
+                    </div>
+                </section>
+            </div>`
 
 const ABOUT = `
             <div class="about-screen">
