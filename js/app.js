@@ -3,7 +3,7 @@
 // contact,
 // skill
 const navLists = document.querySelectorAll('.nav-menu li')
-const projects = document.querySelector('.project')
+const projects = document.querySelector('.CTA')
 const sectionTwo = document.querySelector('.section-two')
 const skillDescription = document.querySelector('.skill-description')
 
@@ -263,6 +263,155 @@ const SKILLS = `
 
             </div>`
 
+const PROJECT = `<section class="project-screen">
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot1.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot2.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot3.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot4.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot5.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot6.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="p-img-container">
+                        <img src="./assets/images/shot1.png" alt="project-SS">
+                    </div>
+                    <div class="description">
+                        <div class="title">
+                            <h1>project Name</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                        </div>
+                        <div class="controls">
+                            <small class="small">Lead</small>
+                            <div>
+                                <i class='bx bxl-github icon'></i>
+                                <i class='bx bxs-coin-stack icon'></i>
+                                <small class="icon">view</small>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>`
+
 // const SKILLDESCRIPTION = `
 //                 <div class = "skill-description">
 //                     <h1>
@@ -298,6 +447,9 @@ navLists.forEach((nav) => {
       showSkillDescription()
     }
   })
+})
+projects.addEventListener('click', () => {
+  display(PROJECT)
 })
 
 // Loop through the nav lists and add the active class to the current/clicked list

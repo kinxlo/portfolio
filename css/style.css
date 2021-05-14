@@ -52,8 +52,8 @@ html .kaligraphy {
 }
 
 html .shadow {
-  -webkit-filter: drop-shadow(1px 2px 2px #61892f);
-          filter: drop-shadow(1px 2px 2px #61892f);
+  -webkit-filter: drop-shadow(0px 0px 2px #f5f5f5);
+          filter: drop-shadow(0px 0px 2px #f5f5f5);
 }
 
 body {
@@ -153,6 +153,15 @@ body .section-one .screen {
   margin: 0 auto;
   overflow-x: hidden;
   overflow-y: auto;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+body .section-one .screen::-webkit-scrollbar {
+  display: none;
 }
 
 body .section-one .screen .main-container {
@@ -244,23 +253,22 @@ body .section-one .screen .jumbo-text p {
 }
 
 body .section-one .screen .CTA {
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
+  border: none;
+  border-radius: 100px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 3em;
+  margin-bottom: -1em;
   font-size: 12px;
+  padding: 1rem;
+  background-color: #61892f;
 }
 
 body .section-one .screen .CTA i {
   margin-left: 2em;
-}
-
-body .section-one .screen .CTA .line {
-  width: 9.5em;
-  height: .2em;
-  background-color: #61892f;
 }
 
 body .section-one .social-section .socials {
@@ -632,7 +640,7 @@ body .section-one .project-screen {
 }
 
 body .section-one .project-screen .project-card {
-  border: 1px solid #fff;
+  border: 1px solid grey;
   width: 100%;
   height: 20rem;
   border-radius: 5px;
@@ -647,6 +655,8 @@ body .section-one .project-screen .project-card .p-img-container {
 body .section-one .project-screen .project-card .p-img-container img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .section-one .project-screen .project-card .description {
@@ -773,75 +783,9 @@ body .section-two {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  body .section-one .project-screen {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    grid-gap: 10px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
   body .section-one .project-screen .project-card {
-    border: 1px solid #fff;
     width: 70%;
-    height: 25rem;
-    border-radius: 5px;
-    overflow: hidden;
     margin: 0 auto;
-  }
-  body .section-one .project-screen .project-card .p-img-container {
-    width: 100%;
-    height: 50%;
-  }
-  body .section-one .project-screen .project-card .p-img-container img {
-    width: 100%;
-    height: 100%;
-  }
-  body .section-one .project-screen .project-card .description {
-    height: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1rem;
-  }
-  body .section-one .project-screen .project-card .description .title h1 {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-  body .section-one .project-screen .project-card .description .title p {
-    font-size: 12px;
-    font-weight: 100;
-    margin: 5px 0;
-    text-align: justify;
-  }
-  body .section-one .project-screen .project-card .description .controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-  body .section-one .project-screen .project-card .description .controls .small {
-    border: 1px solid #fff;
-    padding: .3rem 1rem;
-    font-size: small;
-  }
-  body .section-one .project-screen .project-card .description .controls .icon {
-    margin: 10px;
-    font-size: small;
   }
   body .section-two {
     display: none;
@@ -989,73 +933,9 @@ body .section-two {
             transform: scale(0.9);
   }
   body .section-one .project-screen {
-    display: -ms-grid;
-    display: grid;
     -ms-grid-columns: auto auto;
         grid-template-columns: auto auto;
     grid-gap: 20px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  body .section-one .project-screen .project-card {
-    border: 1px solid #fff;
-    width: 100%;
-    height: 20rem;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  body .section-one .project-screen .project-card .p-img-container {
-    width: 100%;
-    height: 50%;
-  }
-  body .section-one .project-screen .project-card .p-img-container img {
-    width: 100%;
-    height: 100%;
-  }
-  body .section-one .project-screen .project-card .description {
-    height: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1rem;
-  }
-  body .section-one .project-screen .project-card .description .title h1 {
-    font-size: 1rem;
-    letter-spacing: 2px;
-  }
-  body .section-one .project-screen .project-card .description .title p {
-    font-size: 12px;
-    font-weight: 100;
-    margin: 5px 0;
-    text-align: justify;
-  }
-  body .section-one .project-screen .project-card .description .controls {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-  body .section-one .project-screen .project-card .description .controls .small {
-    border: 1px solid #fff;
-    padding: .3rem 1rem;
-    font-size: small;
-  }
-  body .section-one .project-screen .project-card .description .controls .icon {
-    margin: 10px;
-    font-size: small;
   }
 }
 
@@ -1559,6 +1439,9 @@ body .section-two {
   body .section-one .skills-screen .circle-div .circle .java {
     top: 43.5rem;
     left: 20rem;
+  }
+  body .section-one .project-screen {
+    grid-gap: 50px;
   }
   body .section-two {
     position: relative;
