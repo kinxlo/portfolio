@@ -19,7 +19,7 @@ html {
 }
 
 html body {
-  color: #f5f5f5;
+  color: grey;
   background-color: #fff;
   overflow: hidden;
 }
@@ -44,7 +44,7 @@ html small {
 
 html a {
   font-weight: bolder;
-  color: #f5f5f5;
+  color: #fff;
 }
 
 html .kaligraphy {
@@ -54,6 +54,22 @@ html .kaligraphy {
 html .shadow {
   -webkit-filter: drop-shadow(0px 0px 2px #f5f5f5);
           filter: drop-shadow(0px 0px 2px #f5f5f5);
+}
+
+@-webkit-keyframes move {
+  to {
+    position: fixed;
+    -webkit-transform: translate(55rem, -45rem);
+            transform: translate(55rem, -45rem);
+  }
+}
+
+@keyframes move {
+  to {
+    position: fixed;
+    -webkit-transform: translate(55rem, -45rem);
+            transform: translate(55rem, -45rem);
+  }
 }
 
 body {
@@ -96,7 +112,7 @@ body .section-one .nav-container {
           align-items: center;
   width: 100%;
   max-width: 900px;
-  margin: 1rem auto;
+  margin: .5rem auto;
 }
 
 body .section-one .nav-container .avatar {
@@ -112,6 +128,7 @@ body .section-one .nav-container .avatar img {
 }
 
 body .section-one .nav-container .nav-menu {
+  color: #f5f5f5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -147,10 +164,11 @@ body .section-one .nav-container .hamburger-menu img:hover {
 }
 
 body .section-one .screen {
-  height: calc(100% - 150px);
+  height: calc(110% - 150px);
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 1rem 0;
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: none;
@@ -246,7 +264,7 @@ body .section-one .screen .jumbo-text {
 }
 
 body .section-one .screen .jumbo-text p {
-  color: #f5f5f5;
+  color: grey;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .3rem;
@@ -265,8 +283,6 @@ body .section-one .screen .CTA {
   font-size: 12px;
   padding: 1rem;
   background-color: #61892f;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 body .section-one .screen .CTA i {
@@ -289,7 +305,7 @@ body .section-one .social-section .socials i {
 body .section-one .app {
   width: 100%;
   max-width: 900px;
-  margin: 1rem auto;
+  margin: .5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,7 +478,7 @@ body .section-one .about-screen .me p {
   width: 30rem;
   font-size: 10px;
   line-height: 1.5em;
-  color: #f5f5f5;
+  color: grey;
 }
 
 body .section-one .about-screen .me p .TS {
@@ -476,7 +492,7 @@ body .section-one .about-screen .serve {
 body .section-one .about-screen .serve h3 {
   font-size: 1rem;
   padding: 1rem 0;
-  margin: 1rem 0 0;
+  margin: 1rem 0;
   color: #fff;
 }
 
@@ -530,7 +546,7 @@ body .section-one .about-screen .serve .service-container h5 {
 }
 
 body .section-one .about-screen .serve .service-container p {
-  color: #f5f5f5;
+  color: grey;
   font-weight: 500;
   font-size: 10px;
 }
@@ -631,6 +647,7 @@ body .section-one .skills-screen .circle-div .circle .java {
 }
 
 body .section-one .project-screen {
+  position: relative;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -639,6 +656,11 @@ body .section-one .project-screen {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #f5f5f5;
+}
+
+body .section-one .project-screen .a-icon {
+  display: none;
 }
 
 body .section-one .project-screen .project-card {
@@ -685,7 +707,6 @@ body .section-one .project-screen .project-card .description .title p {
   font-size: 12px;
   font-weight: 100;
   margin: 5px 0;
-  text-align: justify;
 }
 
 body .section-one .project-screen .project-card .description .controls {
@@ -939,6 +960,16 @@ body .section-two {
         grid-template-columns: auto auto;
     grid-gap: 20px;
   }
+  body .section-one .project-screen .a-icon {
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    font-size: xx-large;
+    color: #86c232;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -954,6 +985,9 @@ body .section-two {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+  body .section-one .nav-container {
+    margin: 1rem auto;
   }
   body .section-one .screen .main-text h6 {
     font-size: 1rem;
@@ -1033,11 +1067,11 @@ body .section-two {
   }
   body .section-one .about-screen .me p {
     text-align: justify;
-    padding: 0 1rem 0 9rem;
+    padding: 0 1rem 0 10rem;
     width: 30rem;
-    line-height: 2.5em;
-    font-size: 10px;
-    color: #f5f5f5;
+    line-height: 1.5em;
+    font-size: 12px;
+    color: grey;
   }
   body .section-one .about-screen .me p .TS {
     color: #61892f;
@@ -1096,7 +1130,7 @@ body .section-two {
     color: #61892f;
   }
   body .section-one .about-screen .serve .service-container p {
-    color: #f5f5f5;
+    color: grey;
     font-weight: 700;
   }
   body .section-two {
@@ -1305,9 +1339,9 @@ body .section-two {
     text-align: justify;
     padding: 0 1rem 0 9rem;
     width: 30rem;
-    line-height: 2em;
-    font-size: 12px;
-    color: #f5f5f5;
+    line-height: 1.5em;
+    font-size: 14px;
+    color: grey;
   }
   body .section-one .about-screen .me p .TS {
     color: #61892f;
@@ -1366,7 +1400,7 @@ body .section-two {
     color: #61892f;
   }
   body .section-one .about-screen .serve .service-container p {
-    color: #f5f5f5;
+    color: grey;
     font-weight: 500;
   }
   body .section-one .skills-screen {
@@ -1515,7 +1549,7 @@ body .section-two {
   }
   body .section-two .bg-img-container img {
     width: 55%;
-    height: 70%;
+    height: 75%;
   }
   body .section-two .social-section .socials {
     height: 5em;

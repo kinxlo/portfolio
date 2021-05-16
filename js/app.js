@@ -9,8 +9,8 @@ const sectionTwo = document.querySelector('.section-two')
 const skillDescription = document.querySelector('.skill-description')
 
 const display = (page) => {
-    const screen = document.querySelector('.screen')
-    screen.innerHTML = page
+  const screen = document.querySelector('.screen')
+  screen.innerHTML = page
 }
 
 // ======================================================================
@@ -200,153 +200,154 @@ const SKILLS = `
             </div>`
 
 const PROJECT = `<section class="project-screen">
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot1.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <i class="lni lni-arrow-down a-icon"></i>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot1.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot2.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot2.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot3.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot3.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot4.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot4.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot5.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot5.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot6.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot6.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <article class="project-card">
-                    <div class="p-img-container">
-                        <img src="./assets/images/shot1.png" alt="project-SS">
-                    </div>
-                    <div class="description">
-                        <div class="title">
-                            <h1>project Name</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
-                                possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                    <article class="project-card">
+                        <div class="p-img-container">
+                            <img src="./assets/images/shot1.png" alt="project-SS">
                         </div>
-                        <div class="controls">
-                            <small class="small">Lead</small>
-                            <div>
-                                <i class='bx bxl-github icon'></i>
-                                <i class='bx bxs-coin-stack icon'></i>
-                                <small class="icon">view</small>
+                        <div class="description">
+                            <div class="title">
+                                <h1>project Name</h1>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora a dolore placeat
+                                    possimus, suscipit totam nulla vero et praesentium quisquam!</p>
+                            </div>
+                            <div class="controls">
+                                <small class="small">Lead</small>
+                                <div>
+                                    <i class='bx bxl-github icon'></i>
+                                    <i class='bx bxs-coin-stack icon'></i>
+                                    <small class="icon">view</small>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </article>
-            </section>`
+                    </article>
+                </section>`
 
 // const SKILLDESCRIPTION = `
 //                 <div class = "skill-description">
@@ -358,19 +359,17 @@ const PROJECT = `<section class="project-screen">
 //                     </p>
 //                 </div>`
 
-
 // get days of been a coder
 
-
 function getCodeTime() {
-    const dateElement = document.querySelector('.date')
-    let days
-    let hours
-    let mins
-    let seconds
-    
-    // set start date in milliseconds
-    let startDate = new Date(2017, 11, 23, 14).getTime()
+  const dateElement = document.querySelector('.date')
+  let days
+  let hours
+  let mins
+  let seconds
+
+  // set start date in milliseconds
+  let startDate = new Date(2017, 11, 23, 14).getTime()
   // set current date in milliseconds
   let currentDate = new Date().getTime()
   //get time difference
@@ -426,7 +425,6 @@ const Skills = {
   },
 }
 
-
 function showSkillDescription() {
   sectionTwo.style.backgroundImage = `none`
   skillDescription.style.display = `block`
@@ -474,3 +472,16 @@ for (var i = 0; i < navLists.length; i++) {
     this.className += ' active'
   })
 }
+
+// ============================================================
+// GSAP ANIMATION CODE
+// ============================================================
+
+let tl = gsap.timeline({
+  defaults: { delay: 1, duration: 1 },
+//   repeat: -1,
+//   yoyo: true,
+})
+
+tl.from('.border', { borderWidth: 0 })
+tl.from('.introduction', { duration: 1, opacity: 0, x: '-50px' })
