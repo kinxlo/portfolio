@@ -13,24 +13,20 @@ body {
         flex: 1;
         background-color: $background-color-dark;
         width: 100%;
-        padding: 0 1rem;
 
         .nav-container {
-            // border: 1px solid red;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // padding: 1em 0;
             width: 100%;
             max-width: 900px;
             margin: .5rem auto;
+            padding: 0 1rem;
 
             .avatar {
                 // border: 1px solid red;
                 // flex: 1;
-                width: 1.5em;
-                height: 1.5em;
-                // margin-left: 5em;
+                width: 2em;
                 border-radius: 100%;
                 overflow: hidden;
 
@@ -79,12 +75,13 @@ body {
         }
 
         .screen {
-            // border: 1px solid red;
+            border-top: 1px solid $g-accent-color-1;
+            border-bottom: 1px solid $g-accent-color-1;
             height: calc(110% - 150px);
             width: 100%;
             max-width: 900px;
             margin: 0 auto;
-            padding: 1rem 0;
+            padding: 1rem;
             overflow-x: hidden;
             overflow-y: auto;
             -ms-overflow-style: none;
@@ -110,7 +107,7 @@ body {
             .main-text {
                 // border: 1px solid green;
                 font-size: $sm-length-1;
-                width: 100%;
+                width: 90%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -189,6 +186,7 @@ body {
                 }
             }
 
+
             .CTA {
                 border: none;
                 border-radius: 100px;
@@ -200,12 +198,16 @@ body {
                 font-size: 12px;
                 padding: 1rem;
                 background-color: $g-accent-color-1;
+                cursor: pointer;
+                color: #fff;
+                z-index: 999;
                 // animation: move 1s 2s forwards;
-                
+
                 i {
                     margin-left: 2em;
                 }
             }
+
         }
 
         .social-section {
@@ -231,6 +233,7 @@ body {
             // flex-direction: row-reverse;
             justify-content: space-between;
             align-items: baseline;
+            padding: 0 1rem;
             // text-align: center;
 
             h5 {
@@ -557,7 +560,7 @@ body {
             justify-content: center;
             color: #f5f5f5;
 
-            .a-icon{
+            .a-icon {
                 display: none;
             }
 
@@ -999,8 +1002,8 @@ body {
             justify-content: space-between;
             flex: 1;
 
-            .nav-container{
-                 margin: 1rem auto;
+            .nav-container {
+                margin: 1rem auto;
             }
 
             .screen {

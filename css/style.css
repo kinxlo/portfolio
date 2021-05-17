@@ -61,6 +61,8 @@ html .shadow {
     position: fixed;
     -webkit-transform: translate(55rem, -45rem);
             transform: translate(55rem, -45rem);
+    -webkit-transform: translate(-55px, 179px);
+            transform: translate(-55px, 179px);
   }
 }
 
@@ -69,6 +71,8 @@ html .shadow {
     position: fixed;
     -webkit-transform: translate(55rem, -45rem);
             transform: translate(55rem, -45rem);
+    -webkit-transform: translate(-55px, 179px);
+            transform: translate(-55px, 179px);
   }
 }
 
@@ -97,7 +101,6 @@ body .section-one {
           flex: 1;
   background-color: #222629;
   width: 100%;
-  padding: 0 1rem;
 }
 
 body .section-one .nav-container {
@@ -113,11 +116,11 @@ body .section-one .nav-container {
   width: 100%;
   max-width: 900px;
   margin: .5rem auto;
+  padding: 0 1rem;
 }
 
 body .section-one .nav-container .avatar {
-  width: 1.5em;
-  height: 1.5em;
+  width: 2em;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -164,11 +167,13 @@ body .section-one .nav-container .hamburger-menu img:hover {
 }
 
 body .section-one .screen {
+  border-top: 1px solid #61892f;
+  border-bottom: 1px solid #61892f;
   height: calc(110% - 150px);
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1rem;
   overflow-x: hidden;
   overflow-y: auto;
   -ms-overflow-style: none;
@@ -198,7 +203,7 @@ body .section-one .screen .main-container {
 
 body .section-one .screen .main-text {
   font-size: 0.25rem;
-  width: 100%;
+  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -283,6 +288,9 @@ body .section-one .screen .CTA {
   font-size: 12px;
   padding: 1rem;
   background-color: #61892f;
+  cursor: pointer;
+  color: #fff;
+  z-index: 999;
 }
 
 body .section-one .screen .CTA i {
@@ -315,6 +323,7 @@ body .section-one .app {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
+  padding: 0 1rem;
 }
 
 body .section-one .app h5 span {
