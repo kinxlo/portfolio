@@ -2,6 +2,11 @@
 // about,
 // contact,
 // skill
+
+// =================
+// This is the most disorganized JS i have ever written
+// =================
+
 const navLists = document.querySelectorAll('.nav-menu li')
 
 const projects = document.querySelector('.CTA')
@@ -12,6 +17,8 @@ const display = (page) => {
   const screen = document.querySelector('.screen')
   screen.innerHTML = page
 }
+
+runEntranceAnimation()
 
 // ======================================================================
 // html strings
@@ -112,12 +119,7 @@ const ABOUT = `
                     <div class="img-container">
                         <img src="./assets/images/center-img5.png" alt="Kingsley Solomon">
                     </div>
-                    <p>I'm a Front-End Developer from Lagos, Nigeria, currently working at <a
-                            href="https://techstudioacademy.com/" target="blank" class="TS">Techstudio
-                            academy NG</a> I have an interest for UI effects, animations and creating intuitive, dynamic
-                        user experiences. you can checkout <a href="project" class="TS">what i have done.</a> When i'm not working, I enjoy video games and chess. I
-                        would
-                        definetly like to work with you. <a href = "../assets/CV/Kingsley Ifijeh Curriculum Vitae (Updated).docx" class = "TS" download>Get my CV Here.</a></p>
+                    <p id="about-me"></p>
                 </div>
 
                 <div class="serve">
@@ -183,17 +185,17 @@ const SKILLS = `
             <div class = "skills-screen">
                 <div class = "circle-div">
                     <div class = "circle">
-                        <h3 class = "html  foward">HTML 5</h3>
-                        <h3 class = "css  foward">CSS</h3>
-                        <h3 class = "js  foward">JAVASCRIPT</h3>
-                        <h3 class = "react foward">REACT</h3>
-                        <h3 class = "git foward">GIT</h3>
-                        <h3 class = "bs foward">BOOTSTRAP</h3>
-                        <h3 class = "json behind ">JSON</h3>
-                        <h3 class = "sass behind">SASS</h3>
-                        <h3 class = "node behind">NODE.JS</h3>
-                        <h3 class = "gsap behind">GSAP</h3>
-                        <h3 class = "java behind">JAVA</h3>
+                        <h3 class = "tool html  foward">HTML 5</h3>
+                        <h3 class = "tool css  foward">CSS</h3>
+                        <h3 class = "tool js  foward">JAVASCRIPT</h3>
+                        <h3 class = "tool react foward">REACT</h3>
+                        <h3 class = "tool git foward">GIT</h3>
+                        <h3 class = "tool bs foward">BOOTSTRAP</h3>
+                        <h3 class = "tool json behind ">JSON</h3>
+                        <h3 class = "tool sass behind">SASS</h3>
+                        <h3 class = "tool node behind">NODE.JS</h3>
+                        <h3 class = "tool gsap behind">GSAP</h3>
+                        <h3 class = "tool java behind">JAVA</h3>
                     </div>
                 </div>
 
@@ -411,7 +413,7 @@ function getProjectStack() {
       stack.classList.add('stack-active')
     })
     backIcon.addEventListener('click', () => {
-        stack.classList.remove('stack-active')
+      stack.classList.remove('stack-active')
     })
   })
 }
@@ -509,18 +511,20 @@ navLists.forEach((nav) => {
     if (nav.className == 'about') {
       display(ABOUT)
       removeSkillDescription()
+      runAboutAnimation()
     } else if (nav.className == 'contact') {
       display(CONTACT)
       removeSkillDescription()
     } else if (nav.className == 'skills') {
       display(SKILLS)
       showSkillDescription()
+      runSkillAnimation()
     }
   })
 })
 
 projects.addEventListener('click', () => {
-  display(PROJECT)
+  runProjectAnimation()
   getProjectStack()
 })
 
@@ -546,17 +550,97 @@ for (var i = 0; i < navLists.length; i++) {
 // GSAP ANIMATION CODE
 // ============================================================
 
-let tl = gsap.timeline({
-  defaults: { duration: 1 },
-  //   repeat: -1,
-  //   yoyo: true,
-})
+// entrance animation
+function runEntranceAnimation() {
+  let tl = gsap.timeline({
+    defaults: { duration: 1 },
+    //   repeat: -1,
+    //   yoyo: true,
+  })
 
-tl.from('.border', { borderWidth: 0 })
-tl.from('.introduction', { delay: 1, opacity: 0, x: '-50px' })
-tl.from('small', { duration: 2, opacity: 0, color: 'red' })
-tl.from(
-  '.socials img',
-  { duration: 0.3, opacity: 0, scale: '0.1', stagger: 0.2, ease: 'bounce.out' },
-  '-=0.1'
-)
+  tl.from('.border', { borderWidth: 0 })
+  tl.from('small', { duration: 2, opacity: 0, color: 'red' })
+  tl.from('.introduction', { delay: 1, opacity: 0, x: '-50px' })
+
+  tl.to('#hello', {
+    duration: 1,
+    text: "Hello, I'm",
+    ease: 'none',
+  })
+  tl.to('#f-name', {
+    duration: 1,
+    text: 'Kingsley',
+    ease: 'none',
+  })
+  tl.to('#s-name', {
+    duration: 1,
+    text: 'Solomon',
+    ease: 'none',
+  })
+  tl.to('#your', {
+    duration: 1,
+    text: 'Your',
+    ease: 'none',
+  })
+  tl.to('#job', {
+    duration: 1,
+    text: 'Frontend Developer / Instructor',
+    ease: 'none',
+  })
+
+  tl.from(
+    '.socials img',
+    {
+      duration: 0.3,
+      opacity: 0,
+      scale: '0.1',
+      stagger: 0.2,
+      ease: 'bounce.out',
+    },
+    '-=0.1'
+  )
+}
+
+// run skill animations
+function runSkillAnimation() {
+  let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
+  tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
+}
+
+// run Project Animation
+function runProjectAnimation() {
+  gsap.to('.CTA', {
+    duration: 2,
+    x: '-55px',
+    y: '179px',
+    onComplete: function () {
+      display(PROJECT)
+      gsap.from('.project-card', {
+        scrollTrigger: '.project-card',
+        opacity: 0,
+        scale: 0,
+        stagger: 0.4,
+      })
+    },
+  })
+}
+
+// run text animations
+function runTextAnimation() {
+  let tl = gsap.timeline()
+}
+
+// run about me animation
+
+function runAboutAnimation() {
+  gsap.to('#about-me', {
+    duration: 5,
+    text: `I'm a Front-End Developer from Lagos, Nigeria, currently working at <a
+                            href="https://techstudioacademy.com/" target="blank" class="TS">Techstudio
+                            academy NG</a> I have an interest for UI effects, animations and creating intuitive, dynamic
+                        user experiences. you can checkout <a href="project" class="TS">what i have done.</a> When i'm not working, I enjoy video games and chess. I
+                        would
+                        definetly like to work with you. <a href = "../assets/CV/Kingsley Ifijeh Curriculum Vitae (Updated).docx" class = "TS" download>Get my CV Here.</a>`,
+    ease: 'none',
+  })
+}

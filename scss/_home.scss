@@ -75,6 +75,7 @@ body {
         }
 
         .screen {
+            position: relative;
             border-top: 1px solid $g-accent-color-1;
             border-bottom: 1px solid $g-accent-color-1;
             height: calc(110% - 150px);
@@ -161,12 +162,6 @@ body {
                     align-items: center;
                 }
 
-                .hyphen {
-                    background-color: $accent-color-1;
-                    width: 7rem;
-                    height: .3rem;
-                    margin-left: 1rem;
-                }
             }
 
 
@@ -188,14 +183,15 @@ body {
 
 
             .CTA {
+                // position: absolute;
                 border: none;
                 border-radius: 100px;
-                text-transform: capitalize;
+                text-transform: lowercase;
                 letter-spacing: 1px;
                 width: fit-content;
                 margin-top: 3em;
                 margin-bottom: -1em;
-                font-size: 12px;
+                font-size: 10px;
                 padding: 1rem;
                 background-color: $g-accent-color-1;
                 cursor: pointer;
@@ -203,8 +199,12 @@ body {
                 z-index: 999;
                 // animation: move 1s 2s forwards;
 
-                i {
-                    margin-left: 2em;
+                // i {
+                //     margin-left: 2em;
+                // }
+
+                &:active{
+                    color: red;
                 }
             }
 

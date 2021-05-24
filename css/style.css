@@ -167,6 +167,7 @@ body .section-one .nav-container .hamburger-menu img:hover {
 }
 
 body .section-one .screen {
+  position: relative;
   border-top: 1px solid #61892f;
   border-bottom: 1px solid #61892f;
   height: calc(110% - 150px);
@@ -252,13 +253,6 @@ body .section-one .screen .name .second-name {
           align-items: center;
 }
 
-body .section-one .screen .name .hyphen {
-  background-color: #c3073f;
-  width: 7rem;
-  height: .3rem;
-  margin-left: 1rem;
-}
-
 body .section-one .screen .jumbo-text {
   margin: 1em 0 0 0;
   padding-right: 0;
@@ -278,14 +272,14 @@ body .section-one .screen .jumbo-text p {
 body .section-one .screen .CTA {
   border: none;
   border-radius: 100px;
-  text-transform: capitalize;
+  text-transform: lowercase;
   letter-spacing: 1px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 3em;
   margin-bottom: -1em;
-  font-size: 12px;
+  font-size: 10px;
   padding: 1rem;
   background-color: #61892f;
   cursor: pointer;
@@ -293,8 +287,8 @@ body .section-one .screen .CTA {
   z-index: 999;
 }
 
-body .section-one .screen .CTA i {
-  margin-left: 2em;
+body .section-one .screen .CTA:active {
+  color: red;
 }
 
 body .section-one .social-section .socials {
