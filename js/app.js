@@ -9,7 +9,7 @@
 
 const navLists = document.querySelectorAll('.nav-menu li')
 
-const projects = document.querySelector('.CTA')
+const projectsBtns = document.querySelectorAll('.CTA')
 const sectionTwo = document.querySelector('.section-two')
 const skillDescription = document.querySelector('.skill-description')
 
@@ -164,16 +164,18 @@ const CONTACT = `
                         <h1>Send me a Message</h1>
                         <h5>Have a question or want to work together?</h5>
                     </div>
-                    <div class="input-div">
-                        <input type="text" placeholder="NAME" required>
-                    </div>
-                    <div class="input-div">
-                        <input type="email" placeholder="EMAIL" required>
-                    </div>
-                    <div class="textarea-div">
-                        <textarea name="" id="" placeholder="MESSAGE" required></textarea>
-                    </div>
-                    <button>Submit</button>
+                    <section class="form">
+                        <div class="input-div">
+                            <input type="text" placeholder="NAME" required>
+                        </div>
+                        <div class="input-div">
+                            <input type="email" placeholder="EMAIL" required>
+                        </div>
+                        <div class="textarea-div">
+                            <textarea name="" id="" placeholder="MESSAGE" required></textarea>
+                        </div>
+                        <button>Submit</button>
+                    </section>
                 </form>
                 <div class="arrow-img">
                     <h6>you can also find me here.</h6>
@@ -185,17 +187,26 @@ const SKILLS = `
             <div class = "skills-screen">
                 <div class = "circle-div">
                     <div class = "circle">
-                        <h3 class = "tool html  foward">HTML 5</h3>
-                        <h3 class = "tool css  foward">CSS</h3>
-                        <h3 class = "tool js  foward">JAVASCRIPT</h3>
-                        <h3 class = "tool react foward">REACT</h3>
-                        <h3 class = "tool git foward">GIT</h3>
-                        <h3 class = "tool bs foward">BOOTSTRAP</h3>
-                        <h3 class = "tool json behind ">JSON</h3>
-                        <h3 class = "tool sass behind">SASS</h3>
-                        <h3 class = "tool node behind">NODE.JS</h3>
-                        <h3 class = "tool gsap behind">GSAP</h3>
-                        <h3 class = "tool java behind">JAVA</h3>
+                        <h3 class = "tool html  foward">
+                            <img src="https://img.icons8.com/color/32/000000/html-5--v1.png"/>
+                            <p>HTML 5</p>
+                        </h3>
+
+                        <h3 class = "tool css  foward">
+                        <img src="https://img.icons8.com/color/32/000000/css3.png"/>
+                        <p>CSS</p></h3>
+
+                        <h3 class = "tool js  foward">
+                        <img src="https://img.icons8.com/color/32/000000/javascript.png"/><p>JAVASCRIPT</p></h3>
+
+                        <h3 class = "tool react foward"><img src="https://img.icons8.com/color/32/000000/react-native.png"/><p>REACT</p></h3>
+                        <h3 class = "tool git foward"><img src="https://img.icons8.com/color/32/000000/git.png"/><p>GIT</p></h3>
+                        <h3 class = "tool bs foward"><img src="https://img.icons8.com/color/32/000000/bootstrap.png"/><p>BOOTSTRAP</p></h3>
+                        <h3 class = "tool json behind "><img src="https://img.icons8.com/nolan/32/json.png"/><p>JSON</p></h3>
+                        <h3 class = "tool sass behind"><img src="https://img.icons8.com/color/32/000000/sass-avatar.png"/><p>SASS</p></h3>
+                        <h3 class = "tool node behind"><img src="https://img.icons8.com/color/32/000000/nodejs.png"/><p>NODE.JS</p></h3>
+                        <h3 class = "tool gsap behind"><p>GSAP</p></h3>
+                        <h3 class = "tool java behind"><img src="https://img.icons8.com/color/32/000000/java-coffee-cup-logo.png"/><p>JAVA</p></h3>
                     </div>
                 </div>
 
@@ -361,7 +372,7 @@ const PROJECT = `<section class="project-screen">
                                 <li>Javascript</li>
                             </ul>
                             <div>
-                                <a href="" target="blank"><small class="icon">view</small></a>
+                                <a href="https://kinxlo.github.io/AI-Test/" target="blank"><small class="icon view">view</small></a>
                                 <small class = "back-icon">back</small>
                             </div>
                         </div>
@@ -515,6 +526,7 @@ navLists.forEach((nav) => {
     } else if (nav.className == 'contact') {
       display(CONTACT)
       removeSkillDescription()
+      runFormAnimation()
     } else if (nav.className == 'skills') {
       display(SKILLS)
       showSkillDescription()
@@ -523,9 +535,19 @@ navLists.forEach((nav) => {
   })
 })
 
-projects.addEventListener('click', () => {
-  runProjectAnimation()
-  getProjectStack()
+projectsBtns.forEach((projectBtn) => {
+  projectBtn.addEventListener('click', () => {
+    display(PROJECT)
+    getProjectStack()
+    gsap.from('.project-card', {
+      scrollTrigger: '.project-card',
+      opacity: 0,
+      scale: 0,
+      stagger: 0.4,
+    })
+
+    //   runProjectAnimation()
+  })
 })
 
 // ===================================================================
@@ -558,72 +580,66 @@ function runEntranceAnimation() {
     //   yoyo: true,
   })
 
+  
   tl.from('.border', { borderWidth: 0 })
   tl.from('small', { duration: 2, opacity: 0, color: 'red' })
   tl.from('.introduction', { delay: 1, opacity: 0, x: '-50px' })
-
+  
   tl.to('#hello', {
-    duration: 1,
-    text: "Hello, I'm",
-    ease: 'none',
-  })
-  tl.to('#f-name', {
-    duration: 1,
-    text: 'Kingsley',
-    ease: 'none',
-  })
-  tl.to('#s-name', {
-    duration: 1,
-    text: 'Solomon',
-    ease: 'none',
-  })
-  tl.to('#your', {
-    duration: 1,
-    text: 'Your',
-    ease: 'none',
-  })
-  tl.to('#job', {
-    duration: 1,
-    text: 'Frontend Developer / Instructor',
-    ease: 'none',
-  })
-
-  tl.from(
-    '.socials img',
-    {
-      duration: 0.3,
-      opacity: 0,
-      scale: '0.1',
-      stagger: 0.2,
+      duration: 1,
+      color: 'grey',
+      text: "Hello, I'm",
+      ease: 'none',
+    })
+    tl.to('#f-name', {
+        duration: 1,
+        color: '#61892f',
+        text: 'Kingsley',
+        ease: 'none',
+    })
+    tl.to('#s-name', {
+        duration: 1,
+        color: '#61892f',
+        text: 'Solomon',
+        ease: 'none',
+    })
+    tl.to('#your', {
+        duration: 1,
+        color: 'grey',
+        text: 'Your',
+        ease: 'none',
+    })
+    tl.to('#job', {
+        duration: 1,
+        color: 'grey',
+        text: 'Frontend Developer / Instructor',
+        ease: 'none',
+    })
+    
+    tl.from('.nav-app', { opacity: 0, y: '10' })
+    
+    tl.from(
+        '.socials img',
+        {
+            duration: 0.3,
+            opacity: 0,
+            scale: '0.1',
+            stagger: 0.2,
       ease: 'bounce.out',
     },
     '-=0.1'
-  )
+    )
+    tl.from('.CTA', { duration: 3, opacity: 0, ease: 'power2' })
 }
 
 // run skill animations
 function runSkillAnimation() {
-  let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
-  tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
+    let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
+    tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
 }
 
 // run Project Animation
-function runProjectAnimation() {
-  gsap.to('.CTA', {
-    duration: 2,
-    x: '-55px',
-    y: '179px',
-    onComplete: function () {
-      display(PROJECT)
-      gsap.from('.project-card', {
-        scrollTrigger: '.project-card',
-        opacity: 0,
-        scale: 0,
-        stagger: 0.4,
-      })
-    },
-  })
-}
+function runProjectAnimation() {}
 
 // run text animations
 function runTextAnimation() {
@@ -642,5 +658,22 @@ function runAboutAnimation() {
                         would
                         definetly like to work with you. <a href = "../assets/CV/Kingsley Ifijeh Curriculum Vitae (Updated).docx" class = "TS" download>Get my CV Here.</a>`,
     ease: 'none',
+  })
+
+  gsap.from('.img-container', {
+    delay: 2,
+    duration: 0.5,
+    scale: 0,
+    opacity: 0,
+    rotate: -360,
+  })
+}
+
+function runFormAnimation() {
+  gsap.from('.form', {
+    duration: 1,
+    opacity: 0,
+    marginRight: '50%',
+    marginLeft: '50%',
   })
 }

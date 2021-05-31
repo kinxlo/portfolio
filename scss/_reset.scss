@@ -61,6 +61,13 @@ html {
     filter: drop-shadow(0px 0px 2px #f5f5f5);
   }
 
+  .grow{
+    transition: all 0.3s ease;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+
   @keyframes move {
 
     to {
