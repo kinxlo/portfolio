@@ -187,26 +187,59 @@ const SKILLS = `
             <div class = "skills-screen">
                 <div class = "circle-div">
                     <div class = "circle">
-                        <h3 class = "tool html  foward">
-                            <img src="https://img.icons8.com/color/32/000000/html-5--v1.png"/>
-                            <p>HTML 5</p>
+                    
+                        <h3 class = "tool html foward">
+                            <img class = ""  src="https://img.icons8.com/color/24/000000/html-5--v1.png"/>
+                            <p>HTML</p>
                         </h3>
 
                         <h3 class = "tool css  foward">
-                        <img src="https://img.icons8.com/color/32/000000/css3.png"/>
-                        <p>CSS</p></h3>
+                            <img src="https://img.icons8.com/color/24/000000/css3.png"/>
+                            <p>CSS</p>
+                        </h3>
 
                         <h3 class = "tool js  foward">
-                        <img src="https://img.icons8.com/color/32/000000/javascript.png"/><p>JAVASCRIPT</p></h3>
+                            <img src="https://img.icons8.com/color/24/000000/javascript.png"/>
+                            <p>JAVASCRIPT</p>
+                        </h3>
 
-                        <h3 class = "tool react foward"><img src="https://img.icons8.com/color/32/000000/react-native.png"/><p>REACT</p></h3>
-                        <h3 class = "tool git foward"><img src="https://img.icons8.com/color/32/000000/git.png"/><p>GIT</p></h3>
-                        <h3 class = "tool bs foward"><img src="https://img.icons8.com/color/32/000000/bootstrap.png"/><p>BOOTSTRAP</p></h3>
-                        <h3 class = "tool json behind "><img src="https://img.icons8.com/nolan/32/json.png"/><p>JSON</p></h3>
-                        <h3 class = "tool sass behind"><img src="https://img.icons8.com/color/32/000000/sass-avatar.png"/><p>SASS</p></h3>
-                        <h3 class = "tool node behind"><img src="https://img.icons8.com/color/32/000000/nodejs.png"/><p>NODE.JS</p></h3>
-                        <h3 class = "tool gsap behind"><p>GSAP</p></h3>
-                        <h3 class = "tool java behind"><img src="https://img.icons8.com/color/32/000000/java-coffee-cup-logo.png"/><p>JAVA</p></h3>
+                        <h3 class = "tool react foward">
+                            <img src="https://img.icons8.com/color/24/000000/react-native.png"/>
+                            <p>REACT</p>
+                        </h3>
+
+                        <h3 class = "tool git foward">
+                            <img src="https://img.icons8.com/color/24/000000/git.png"/>
+                            <p>GIT</p>
+                        </h3>
+
+                        <h3 class = "tool bs foward">
+                            <img src="https://img.icons8.com/color/24/000000/bootstrap.png"/>
+                            <p>BOOTSTRAP</p>
+                        </h3>
+                        <h3 class = "tool json foward ">
+                        <img src="https://img.icons8.com/nolan/24/json.png"/>
+                        <p>JSON</p>
+                        </h3>
+
+                        <h3 class = "tool sass foward"
+                            <img src="https://img.icons8.com/color/24/000000/sass.png"/>
+                            <p>SASS</p>
+                        </h3>
+
+                        <h3 class = "tool node foward">
+                            <img src="https://img.icons8.com/color/24/000000/nodejs.png"/>
+                            <p>NODE</p>
+                        </h3>
+
+                        <h3 class = "tool gsap behind">
+                        <p>GSAP</p>
+                        </h3>
+
+                        <h3 class = "tool java foward">
+                            <img src="https://img.icons8.com/color/24/000000/java-coffee-cup-logo.png"/>
+                            <p>JAVA</p>
+                        </h3>
                     </div>
                 </div>
 
