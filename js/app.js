@@ -4,7 +4,7 @@
 // skill
 
 // =================
-// This is the most disorganized JS i have ever written
+// This is the most disorganized JS i have ever written!
 // =================
 
 const navLists = document.querySelectorAll('.nav-menu li')
@@ -217,15 +217,12 @@ const SKILLS = `
                             <img src="https://img.icons8.com/color/24/000000/bootstrap.png"/>
                             <p>BOOTSTRAP</p>
                         </h3>
+
                         <h3 class = "tool json foward ">
-                        <img src="https://img.icons8.com/nolan/24/json.png"/>
-                        <p>JSON</p>
+                            <img src="https://img.icons8.com/nolan/24/json.png"/>
+                            <p>JSON</p>
                         </h3>
 
-                        <h3 class = "tool sass foward"
-                            <img src="https://img.icons8.com/color/24/000000/sass.png"/>
-                            <p>SASS</p>
-                        </h3>
 
                         <h3 class = "tool node foward">
                             <img src="https://img.icons8.com/color/24/000000/nodejs.png"/>
@@ -233,13 +230,20 @@ const SKILLS = `
                         </h3>
 
                         <h3 class = "tool gsap behind">
-                        <p>GSAP</p>
+                            <img src="../assets/images/gsap-greensock.svg"/>
+                            <p>GSAP</p>
                         </h3>
 
                         <h3 class = "tool java foward">
                             <img src="https://img.icons8.com/color/24/000000/java-coffee-cup-logo.png"/>
                             <p>JAVA</p>
                         </h3>
+
+                        <h3 class = "tool sass foward">
+                            <img src="https://img.icons8.com/color/24/000000/sass.png"/>
+                            <p>SASS</p>
+                        </h3>
+
                     </div>
                 </div>
 
@@ -264,7 +268,7 @@ const PROJECT = `<section class="project-screen">
                                 <a href="https://github.com/kinxlo/AI-Test" target="blank"><i
                                         class='bx bxl-github icon'></i></a>
                                 <i class='bx bxs-coin-stack icon stack-icon'></i>
-                                <a href="https://kinxlo.github.io/AI-Test/"><small class="icon view">view</small></a>
+                                <a class='grow' href="https://kinxlo.github.io/AI-Test/"><small class="icon view">view</small></a>
                             </div>
                         </div>
                         <div class="stack">
@@ -446,22 +450,6 @@ const PROJECT = `<section class="project-screen">
                 </article>
             </section>`
 
-// get the overview of the project technology
-function getProjectStack() {
-  const cards = document.querySelectorAll('.project-card')
-  cards.forEach((card) => {
-    const stack = card.querySelector('.stack')
-    const stackIcon = card.querySelector('.stack-icon')
-    const backIcon = card.querySelector('.back-icon')
-    stackIcon.addEventListener('click', () => {
-      stack.classList.add('stack-active')
-    })
-    backIcon.addEventListener('click', () => {
-      stack.classList.remove('stack-active')
-    })
-  })
-}
-
 // const SKILLDESCRIPTION = `
 //                 <div class = "skill-description">
 //                     <h1>
@@ -571,6 +559,7 @@ navLists.forEach((nav) => {
 projectsBtns.forEach((projectBtn) => {
   projectBtn.addEventListener('click', () => {
     display(PROJECT)
+    transitionProject()
     getProjectStack()
     gsap.from('.project-card', {
       scrollTrigger: '.project-card',
@@ -582,6 +571,33 @@ projectsBtns.forEach((projectBtn) => {
     //   runProjectAnimation()
   })
 })
+
+// get the overview of the project technology
+function getProjectStack() {
+  const cards = document.querySelectorAll('.project-card')
+  cards.forEach((card) => {
+    const stack = card.querySelector('.stack')
+    const stackIcon = card.querySelector('.stack-icon')
+    const backIcon = card.querySelector('.back-icon')
+
+    stackIcon.addEventListener('click', () => {
+      stack.classList.add('stack-active')
+    })
+    backIcon.addEventListener('click', () => {
+      stack.classList.remove('stack-active')
+    })
+  })
+}
+
+function transitionProject() {
+  const cardImgs = document.querySelectorAll('.project-card img')
+  cardImgs.forEach((cardImg) => {
+    const card = cardImg.parentNode.parentNode
+    cardImg.addEventListener('click', () => {
+      card.classList.toggle('grow')
+    })
+  })
+}
 
 // ===================================================================
 // CREATING ACTIVE NAVIGATION
@@ -613,62 +629,61 @@ function runEntranceAnimation() {
     //   yoyo: true,
   })
 
-  
   tl.from('.border', { borderWidth: 0 })
   tl.from('small', { duration: 2, opacity: 0, color: 'red' })
   tl.from('.introduction', { delay: 1, opacity: 0, x: '-50px' })
-  
+
   tl.to('#hello', {
-      duration: 1,
-      color: 'grey',
-      text: "Hello, I'm",
-      ease: 'none',
-    })
-    tl.to('#f-name', {
-        duration: 1,
-        color: '#61892f',
-        text: 'Kingsley',
-        ease: 'none',
-    })
-    tl.to('#s-name', {
-        duration: 1,
-        color: '#61892f',
-        text: 'Solomon',
-        ease: 'none',
-    })
-    tl.to('#your', {
-        duration: 1,
-        color: 'grey',
-        text: 'Your',
-        ease: 'none',
-    })
-    tl.to('#job', {
-        duration: 1,
-        color: 'grey',
-        text: 'Frontend Developer / Instructor',
-        ease: 'none',
-    })
-    
-    tl.from('.nav-app', { opacity: 0, y: '10' })
-    
-    tl.from(
-        '.socials img',
-        {
-            duration: 0.3,
-            opacity: 0,
-            scale: '0.1',
-            stagger: 0.2,
+    duration: 1,
+    color: 'grey',
+    text: "Hello, I'm",
+    ease: 'none',
+  })
+  tl.to('#f-name', {
+    duration: 1,
+    color: '#61892f',
+    text: 'Kingsley',
+    ease: 'none',
+  })
+  tl.to('#s-name', {
+    duration: 1,
+    color: '#61892f',
+    text: 'Solomon',
+    ease: 'none',
+  })
+  tl.to('#your', {
+    duration: 1,
+    color: 'grey',
+    text: 'Your',
+    ease: 'none',
+  })
+  tl.to('#job', {
+    duration: 1,
+    color: 'grey',
+    text: 'Frontend Developer / Instructor',
+    ease: 'none',
+  })
+
+  tl.from('.nav-app', { opacity: 0, y: '10' })
+
+  tl.from(
+    '.socials img',
+    {
+      duration: 0.3,
+      opacity: 0,
+      scale: '0.1',
+      stagger: 0.2,
       ease: 'bounce.out',
     },
     '-=0.1'
-    )
-    tl.from('.CTA', { duration: 3, opacity: 0, ease: 'power2' })
+  )
+  tl.from('.CTA', { duration: 3, opacity: 0, ease: 'power2' })
 }
 
 // run skill animations
 function runSkillAnimation() {
-    let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
-    tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
+  let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
+  tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
 }
 
 // run Project Animation
