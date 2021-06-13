@@ -114,40 +114,41 @@ const HOME = `
 
 const ABOUT = `
             <div class="about-screen">
-                <div class="me">
-                    <img src = "../assets/images/55-arrow.png" alt="arrow" class="arrow-img" />
-                    <div class="img-container">
-                        <img src="./assets/images/center-img5.png" alt="Kingsley Solomon">
+                <div class="">
+                    <div class='me'>
+                        <div class="img-container">
+                            <img src="./assets/images/center-img5.png" alt="Kingsley Solomon">
+                        </div>
+                        <p id="about-me"></p>
                     </div>
-                    <p id="about-me"></p>
+                    <h3>What you would be getting</h3>
                 </div>
 
                 <div class="serve">
-                    <h3>What you would be getting</h3>
                     <div class="service-container">
-                        <div class="service-banner">
-                            <div class="service-icon-container">
+                        <div class="service-banner neu-light">
+                            <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/speed--v1.png" />
                             </div>
                             <h5>speed</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia!</p>
                         </div>
-                        <div class="service-banner">
-                            <div class="service-icon-container">
+                        <div class="service-banner neu-light">
+                            <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/for-experienced.png" />
                             </div>
                             <h5>Intuitive</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia!</p>
                         </div>
-                        <div class="service-banner">
-                            <div class="service-icon-container">
+                        <div class="service-banner neu-light">
+                            <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/media-queries.png" />
                             </div>
                             <h5>Responsive</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia!</p>
                         </div>
-                        <div class="service-banner">
-                            <div class="service-icon-container">
+                        <div class="service-banner neu-light">
+                            <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/change.png" />
                             </div>
                             <h5>Dynamic</h5>
@@ -189,58 +190,58 @@ const SKILLS = `
                     <div class = "circle">
                     
                         <h3 class = "tool html foward">
-                            <img class = ""  src="https://img.icons8.com/color/24/000000/html-5--v1.png"/>
+                            <img class = "neu-light"  src="https://img.icons8.com/color/24/000000/html-5--v1.png"/>
                             <p>HTML</p>
                         </h3>
 
                         <h3 class = "tool css  foward">
-                            <img src="https://img.icons8.com/color/24/000000/css3.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/css3.png"/>
                             <p>CSS</p>
                         </h3>
 
                         <h3 class = "tool js  foward">
-                            <img src="https://img.icons8.com/color/24/000000/javascript.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/javascript.png"/>
                             <p>JAVASCRIPT</p>
                         </h3>
 
                         <h3 class = "tool react foward">
-                            <img src="https://img.icons8.com/color/24/000000/react-native.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/react-native.png"/>
                             <p>REACT</p>
                         </h3>
 
                         <h3 class = "tool git foward">
-                            <img src="https://img.icons8.com/color/24/000000/git.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/git.png"/>
                             <p>GIT</p>
                         </h3>
 
                         <h3 class = "tool bs foward">
-                            <img src="https://img.icons8.com/color/24/000000/bootstrap.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/bootstrap.png"/>
                             <p>BOOTSTRAP</p>
                         </h3>
 
                         <h3 class = "tool json foward ">
-                            <img src="https://img.icons8.com/nolan/24/json.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/nolan/24/json.png"/>
                             <p>JSON</p>
                         </h3>
 
 
                         <h3 class = "tool node foward">
-                            <img src="https://img.icons8.com/color/24/000000/nodejs.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/nodejs.png"/>
                             <p>NODE</p>
                         </h3>
 
                         <h3 class = "tool gsap behind">
-                            <img src="../assets/images/gsap-greensock.svg"/>
+                            <img class='neu-light' src="../assets/images/gsap-greensock.svg"/>
                             <p>GSAP</p>
                         </h3>
 
                         <h3 class = "tool java foward">
-                            <img src="https://img.icons8.com/color/24/000000/java-coffee-cup-logo.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/java-coffee-cup-logo.png"/>
                             <p>JAVA</p>
                         </h3>
 
                         <h3 class = "tool sass foward">
-                            <img src="https://img.icons8.com/color/24/000000/sass.png"/>
+                            <img class='neu-light' src="https://img.icons8.com/color/24/000000/sass.png"/>
                             <p>SASS</p>
                         </h3>
 
@@ -530,10 +531,10 @@ function showSkillDescription() {
   sectionTwo.style.backgroundImage = `none`
   skillDescription.style.display = `block`
 }
-function removeSkillDescription() {
-  sectionTwo.style.backgroundImage = `url('../assets/images/binary-1254502.svg')`
-  skillDescription.style.display = `none`
-}
+// function removeSkillDescription() {
+//   sectionTwo.style.backgroundImage = `url('../assets/images/binary-1254502.svg')`
+//   skillDescription.style.display = `none`
+// }
 
 //=============
 // PAGE DISPLAY
@@ -542,11 +543,11 @@ navLists.forEach((nav) => {
   nav.addEventListener('click', () => {
     if (nav.className == 'about') {
       display(ABOUT)
-      removeSkillDescription()
+      //   removeSkillDescription()
       runAboutAnimation()
     } else if (nav.className == 'contact') {
       display(CONTACT)
-      removeSkillDescription()
+      //   removeSkillDescription()
       runFormAnimation()
     } else if (nav.className == 'skills') {
       display(SKILLS)
@@ -635,7 +636,7 @@ function runEntranceAnimation() {
 
   tl.to('#hello', {
     duration: 1,
-    color: 'grey',
+    color: '#00000',
     text: "Hello, I'm",
     ease: 'none',
   })
@@ -653,13 +654,13 @@ function runEntranceAnimation() {
   })
   tl.to('#your', {
     duration: 1,
-    color: 'grey',
+    color: '#00000',
     text: 'Your',
     ease: 'none',
   })
   tl.to('#job', {
     duration: 1,
-    color: 'grey',
+    color: '#000000',
     text: 'Frontend Developer / Instructor',
     ease: 'none',
   })

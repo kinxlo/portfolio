@@ -23,8 +23,7 @@ html {
 
   // body
   body {
-    color: $text-color-light;
-    background-color: $background-color-light;
+    color: #000;
     overflow: hidden;
   }
 
@@ -69,18 +68,14 @@ html {
     }
   }
 
-  .neumo-dark {
-    border-radius: 50px;
-    background: #222629;
-    box-shadow: 5px 5px 10px #1b1e21,
-    -5px -5px 10px #292e31;
+  .neu-light {
+    background: #e0e0e0;
+    box-shadow: 5px 5px 10px #d0d0d0,
+    -5px -5px 10px #f0f0f0;
   }
 
-  .neumo-light {
-    border-radius: 50px;
-    background: #d3d3d3;
-    box-shadow: 5px 5px 10px #b3b3b3,
-    -5px -5px 10px #f3f3f3;
+  .icon{
+    color: #950749 !important;
   }
 
   @keyframes move {

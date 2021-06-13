@@ -19,8 +19,7 @@ html {
 }
 
 html body {
-  color: grey;
-  background-color: #f5f5f5;
+  color: #000;
   overflow: hidden;
 }
 
@@ -66,18 +65,14 @@ html .grow:hover {
           transform: scale(1.1);
 }
 
-html .neumo-dark {
-  border-radius: 50px;
-  background: #222629;
-  -webkit-box-shadow: 5px 5px 10px #1b1e21, -5px -5px 10px #292e31;
-          box-shadow: 5px 5px 10px #1b1e21, -5px -5px 10px #292e31;
+html .neu-light {
+  background: #e0e0e0;
+  -webkit-box-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #f0f0f0;
+          box-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #f0f0f0;
 }
 
-html .neumo-light {
-  border-radius: 50px;
-  background: #d3d3d3;
-  -webkit-box-shadow: 5px 5px 10px #b3b3b3, -5px -5px 10px #f3f3f3;
-          box-shadow: 5px 5px 10px #b3b3b3, -5px -5px 10px #f3f3f3;
+html .icon {
+  color: #950749 !important;
 }
 
 @-webkit-keyframes move {
@@ -123,7 +118,7 @@ body .section-one {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #222629;
+  background-color: #e0e0e0;
   width: 100%;
 }
 
@@ -157,7 +152,7 @@ body .section-one .nav-container .avatar img {
 }
 
 body .section-one .nav-container .nav-menu {
-  color: #f5f5f5;
+  color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,9 +240,9 @@ body .section-one .screen .main-text {
 }
 
 body .section-one .screen .main-text h6 {
+  color: #000 !important;
   font-size: 10px;
   font-style: italic;
-  color: #222629;
 }
 
 body .section-one .screen .main-text .border {
@@ -259,7 +254,7 @@ body .section-one .screen .main-text small,
 body .section-one .screen .main-text #small {
   display: block;
   font-size: 10px;
-  color: #474b4f;
+  color: lightgrey;
   letter-spacing: 1px;
   font-family: 'caveat', cursive;
 }
@@ -268,7 +263,6 @@ body .section-one .screen .name {
   margin: .5em 0;
   font-size: 1.25rem;
   letter-spacing: 1rem;
-  color: #222629;
 }
 
 body .section-one .screen .name .second-name {
@@ -291,10 +285,10 @@ body .section-one .screen .jumbo-text {
 
 body .section-one .screen .jumbo-text p {
   height: 2rem;
-  color: #222629;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .3rem;
+  color: #000 !important;
 }
 
 body .section-one .screen .CTA {
@@ -309,12 +303,10 @@ body .section-one .screen .CTA {
   margin-bottom: -1em;
   font-size: 10px;
   padding: 1rem;
-  color: #f5f5f5;
+  color: #950740;
+  font-weight: bolder;
   cursor: pointer;
   z-index: 999;
-  background: #222629;
-  -webkit-box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
-          box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
 }
 
 body .section-one .screen .CTA:active {
@@ -331,12 +323,8 @@ body .section-one .social-section .socials {
 }
 
 body .section-one .social-section .socials img {
-  font-size: large;
   border-radius: 100%;
   padding: .5rem;
-  background: #222629;
-  -webkit-box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
-          box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
 }
 
 body .section-one .app {
@@ -423,10 +411,7 @@ body .section-one .form-div form input,
 body .section-one .form-div form textarea,
 body .section-one .form-div form button {
   background: transparent;
-  border: 1px solid lightgray;
-  color: #fff;
-  -webkit-box-shadow: inset 23px 23px 45px #1c1f22, inset -23px -23px 45px #282d30;
-          box-shadow: inset 23px 23px 45px #1c1f22, inset -23px -23px 45px #282d30;
+  border: 1px solid #950740;
 }
 
 body .section-one .form-div form .input-div {
@@ -469,6 +454,14 @@ body .section-one .about-screen {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
+}
+
+body .section-one .about-screen h3 {
+  font-size: 1.25rem;
+  padding: 1rem 0;
+  color: #950740;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 body .section-one .about-screen .me {
@@ -524,7 +517,7 @@ body .section-one .about-screen .me p {
   font-size: 10px;
   line-height: 1.5em;
   height: 9rem;
-  color: grey;
+  color: #808080;
 }
 
 body .section-one .about-screen .me p .TS {
@@ -535,14 +528,8 @@ body .section-one .about-screen .serve {
   text-align: center;
 }
 
-body .section-one .about-screen .serve h3 {
-  font-size: 1rem;
-  padding: 1rem 0;
-  margin: 1rem 0;
-  color: #fff;
-}
-
 body .section-one .about-screen .serve .service-container {
+  margin-top: 5rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: auto;
@@ -566,9 +553,6 @@ body .section-one .about-screen .serve .service-container .service-banner {
           justify-content: center;
   padding: 2rem;
   border-radius: 2px;
-  background: #222629;
-  -webkit-box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
-          box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
 }
 
 body .section-one .about-screen .serve .service-container .service-banner .service-icon-container {
@@ -577,7 +561,6 @@ body .section-one .about-screen .serve .service-container .service-banner .servi
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #222629;
   border-radius: 100%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -585,9 +568,6 @@ body .section-one .about-screen .serve .service-container .service-banner .servi
   margin: 0 auto;
   padding: .9em 1em;
   border-radius: 150px;
-  background: #222629;
-  -webkit-box-shadow: 10px 10px 19px #1c1f22, -5px -5px 10px #282d30;
-          box-shadow: 10px 10px 19px #1c1f22, -5px -5px 10px #282d30;
 }
 
 body .section-one .about-screen .serve .service-container h5 {
@@ -598,7 +578,7 @@ body .section-one .about-screen .serve .service-container h5 {
 }
 
 body .section-one .about-screen .serve .service-container p {
-  color: grey;
+  color: #808080;
   font-weight: 500;
   font-size: 10px;
 }
@@ -658,14 +638,11 @@ body .section-one .skills-screen .circle-div .circle h3:nth-child(odd) {
 body .section-one .skills-screen .circle-div .circle h3 img {
   padding: .5rem;
   border-radius: 50%;
-  background: #222629;
-  -webkit-box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
-          box-shadow: 5px 5px 10px #1d2023, -5px -5px 10px #272c2f;
 }
 
 body .section-one .skills-screen .circle-div .circle h3 p {
   font-family: 'caveat', sans-serif;
-  color: #f5f5f5;
+  color: #950740;
   margin: 0 10px;
 }
 
@@ -694,6 +671,8 @@ body .section-one .project-screen .project-card {
   border-radius: 5px;
   overflow: hidden;
   margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 10px grey;
+          box-shadow: 2px 2px 10px grey;
 }
 
 body .section-one .project-screen .project-card .p-img-container {
@@ -722,8 +701,8 @@ body .section-one .project-screen .project-card .description {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: .5rem 1rem;
-  background: #f5f5f5;
-  color: #222629;
+  color: #950740;
+  background-color: #f5f5f5;
 }
 
 body .section-one .project-screen .project-card .description .title h1 {
@@ -760,7 +739,6 @@ body .section-one .project-screen .project-card .description .controls .icon {
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  color: #222629;
   border-radius: 100%;
   background: #f5f5f5;
   -webkit-box-shadow: 5px 5px 5px #dadada, -5px -5px 5px #ffffff;
@@ -799,20 +777,21 @@ body .section-one .project-screen .project-card .description .stack {
   left: -100%;
   width: 100%;
   height: 100%;
+  background-color: #f5f5f5;
   color: #000;
-  background: #f5f5f5;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 body .section-one .project-screen .project-card .description .stack ul {
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 body .section-one .project-screen .project-card .description .stack li {
   display: inline;
   margin: 0 .5rem;
   font-weight: bold;
+  font-size: small;
 }
 
 body .section-one .project-screen .project-card .description .stack .view {
@@ -1178,6 +1157,13 @@ body .section-two {
   body .section-one .screen .jumbo-text p {
     font-size: 1rem;
   }
+  body .section-one .social-section img {
+    width: 2.4rem;
+    border-radius: 100%;
+    padding: .5rem;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
   body .section-one .app {
     width: 100%;
     max-width: 900px;
@@ -1219,13 +1205,6 @@ body .section-two {
         -ms-flex-align: center;
             align-items: center;
   }
-  body .section-one .about-screen .me .arrow-img {
-    position: absolute;
-    bottom: 0;
-    left: 50px;
-    width: 10%;
-    z-index: 5;
-  }
   body .section-one .about-screen .me .img-container {
     width: 10em;
     height: 8em;
@@ -1248,18 +1227,13 @@ body .section-two {
     width: 30rem;
     line-height: 1.5em;
     font-size: 12px;
-    color: grey;
+    color: #808080;
   }
   body .section-one .about-screen .me p .TS {
     color: #61892f;
   }
   body .section-one .about-screen .serve {
     text-align: center;
-  }
-  body .section-one .about-screen .serve h3 {
-    font-size: 1.25rem;
-    padding: 1rem 0;
-    color: #fff;
   }
   body .section-one .about-screen .serve .service-container {
     display: -ms-grid;
@@ -1277,7 +1251,7 @@ body .section-two {
     color: #61892f;
   }
   body .section-one .about-screen .serve .service-container p {
-    color: grey;
+    color: #808080;
     font-weight: 700;
   }
   body .section-one .skills-screen .circle-div .circle h3 img {
@@ -1291,14 +1265,14 @@ body .section-two {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    grid-gap: 0;
+    grid-gap: 10px;
     height: 100%;
   }
   body .section-one .project-screen .project-card {
     position: relative;
     width: 50%;
     height: 100%;
-    border-radius: 0;
+    border-radius: 10px;
     overflow: hidden;
     margin: 0 !important;
     -webkit-box-flex: 1;
@@ -1326,6 +1300,14 @@ body .section-two {
     font-size: 16px;
     font-weight: 300;
     margin: 5px 0;
+  }
+  body .section-one .project-screen .project-card .description .stack ul {
+    margin: 2rem 0;
+  }
+  body .section-one .project-screen .project-card .description .stack li {
+    display: inline;
+    margin: 0 .5rem;
+    font-weight: bold;
   }
   body .section-one .project-screen .grow {
     -webkit-box-flex: 5;
@@ -1426,7 +1408,7 @@ body .section-two {
     line-height: 1.5em;
     font-size: 14px;
     height: 12rem;
-    color: grey;
+    color: #808080;
   }
   body .section-one .about-screen .me p .TS {
     color: #61892f;
@@ -1453,7 +1435,7 @@ body .section-two {
     color: #61892f;
   }
   body .section-one .about-screen .serve .service-container p {
-    color: grey;
+    color: #808080;
     font-weight: 500;
   }
   body .section-one .skills-screen {
@@ -1528,9 +1510,6 @@ body .section-two {
   body .section-one .skills-screen .circle-div .circle .java {
     top: 43.5rem;
     left: 20rem;
-  }
-  body .section-one .project-screen {
-    grid-gap: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
