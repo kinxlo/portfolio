@@ -121,7 +121,7 @@ body {
 
 
                 h6 {
-                    color: $text-color-dark !important;
+                    color: transparent;
                     font-size: 10px;
                     font-style: italic;
                 }
@@ -164,6 +164,10 @@ body {
                     align-items: center;
                 }
 
+                h1 {
+                    color: transparent;
+                }
+
             }
 
 
@@ -174,14 +178,14 @@ body {
                 // line-height: 2em;
                 font-weight: 500;
                 width: fit-content;
-                
+
 
                 p {
                     height: 2rem;
                     font-size: 12px;
                     font-weight: bold;
                     letter-spacing: .3rem;
-                    color: $text-color-dark !important;
+                    color: transparent;
                 }
             }
 
@@ -189,7 +193,11 @@ body {
             .CTA {
                 // position: absolute;
                 border: none;
-                border-radius: 100px;
+                border-radius: 15px;
+                border-bottom-right-radius: 5px;
+                border-top-left-radius: 5px;
+                border-left: 1.5px solid $accent-color-2;
+                border-right: 1.5px solid $accent-color-2;
                 text-transform: lowercase;
                 letter-spacing: 1px;
                 width: fit-content;
@@ -218,10 +226,9 @@ body {
                 display: flex;
                 justify-content: space-evenly;
 
-                img {
+                svg {
                     border-radius: 100%;
                     padding: .5rem;
-
                 }
             }
         }
@@ -439,10 +446,9 @@ body {
                         display: flex;
                         flex-direction: column;
                         justify-content: center;
-                        // border: 2px solid $g-accent-color-1;
-                        // background: $accent-color-2;
+                        border-left: 2px solid $accent-color-2;
+                        border-right: 2px solid $accent-color-2;
                         padding: 2rem;
-                        border-radius: 2px;
 
 
                         .service-icon-container {
@@ -1205,11 +1211,17 @@ body {
 
             .social-section {
 
-                img {
-                    width: 2.4rem;
-                    border-radius: 100%;
-                    padding: .5rem;
-                    object-fit: contain;
+                // border: 1px solid red;
+                // margin-top: -3rem;
+                .socials {
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    svg {
+                        border-radius: 100%;
+                        padding: .5rem;
+                        width: 2.3rem;
+                    }
                 }
             }
 

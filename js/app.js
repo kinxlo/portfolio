@@ -126,28 +126,28 @@ const ABOUT = `
 
                 <div class="serve">
                     <div class="service-container">
-                        <div class="service-banner neu-light">
+                        <div class="service-banner neu-light-soft">
                             <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/speed--v1.png" />
                             </div>
                             <h5>speed</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia!</p>
                         </div>
-                        <div class="service-banner neu-light">
+                        <div class="service-banner neu-light-soft">
                             <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/for-experienced.png" />
                             </div>
                             <h5>Intuitive</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia!</p>
                         </div>
-                        <div class="service-banner neu-light">
+                        <div class="service-banner neu-light-soft">
                             <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/media-queries.png" />
                             </div>
                             <h5>Responsive</h5>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, mollitia!</p>
                         </div>
-                        <div class="service-banner neu-light">
+                        <div class="service-banner neu-light-soft">
                             <div class="service-icon-container neu-light">
                                 <img src="https://img.icons8.com/material-rounded/28/950740/change.png" />
                             </div>
@@ -636,7 +636,7 @@ function runEntranceAnimation() {
 
   tl.to('#hello', {
     duration: 1,
-    color: '#00000',
+    color: '#000000',
     text: "Hello, I'm",
     ease: 'none',
   })
@@ -654,7 +654,7 @@ function runEntranceAnimation() {
   })
   tl.to('#your', {
     duration: 1,
-    color: '#00000',
+    color: '#000000',
     text: 'Your',
     ease: 'none',
   })

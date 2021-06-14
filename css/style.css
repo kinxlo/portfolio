@@ -66,9 +66,18 @@ html .grow:hover {
 }
 
 html .neu-light {
+  background: linear-gradient(225deg, #cacaca, #f0f0f0);
+  -webkit-box-shadow: -18px 18px 36px #969696, 18px -18px 36px #ffffff;
+          box-shadow: -18px 18px 36px #969696, 18px -18px 36px #ffffff;
+}
+
+html .neu-light-soft {
+  border-radius: 25px;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   background: #e0e0e0;
-  -webkit-box-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #f0f0f0;
-          box-shadow: 5px 5px 10px #d0d0d0, -5px -5px 10px #f0f0f0;
+  -webkit-box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
+          box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
 }
 
 html .icon {
@@ -240,7 +249,7 @@ body .section-one .screen .main-text {
 }
 
 body .section-one .screen .main-text h6 {
-  color: #000 !important;
+  color: transparent;
   font-size: 10px;
   font-style: italic;
 }
@@ -274,6 +283,10 @@ body .section-one .screen .name .second-name {
           align-items: center;
 }
 
+body .section-one .screen .name h1 {
+  color: transparent;
+}
+
 body .section-one .screen .jumbo-text {
   margin: 1em 0 0 0;
   padding-right: 0;
@@ -288,12 +301,16 @@ body .section-one .screen .jumbo-text p {
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .3rem;
-  color: #000 !important;
+  color: transparent;
 }
 
 body .section-one .screen .CTA {
   border: none;
-  border-radius: 100px;
+  border-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-left: 1.5px solid #950740;
+  border-right: 1.5px solid #950740;
   text-transform: lowercase;
   letter-spacing: 1px;
   width: -webkit-fit-content;
@@ -322,7 +339,7 @@ body .section-one .social-section .socials {
           justify-content: space-evenly;
 }
 
-body .section-one .social-section .socials img {
+body .section-one .social-section .socials svg {
   border-radius: 100%;
   padding: .5rem;
 }
@@ -551,8 +568,9 @@ body .section-one .about-screen .serve .service-container .service-banner {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-left: 2px solid #950740;
+  border-right: 2px solid #950740;
   padding: 2rem;
-  border-radius: 2px;
 }
 
 body .section-one .about-screen .serve .service-container .service-banner .service-icon-container {
@@ -1157,12 +1175,18 @@ body .section-two {
   body .section-one .screen .jumbo-text p {
     font-size: 1rem;
   }
-  body .section-one .social-section img {
-    width: 2.4rem;
+  body .section-one .social-section .socials {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body .section-one .social-section .socials svg {
     border-radius: 100%;
     padding: .5rem;
-    -o-object-fit: contain;
-       object-fit: contain;
+    width: 2.3rem;
   }
   body .section-one .app {
     width: 100%;
