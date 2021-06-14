@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
 /* this is the reset style */
 * {
   margin: 0;
@@ -171,8 +172,8 @@ body .section-one .nav-container .nav-menu {
 body .section-one .nav-container .nav-menu li {
   margin: 0 1em;
   font-weight: 600;
-  text-transform: lowercase;
-  font-family: 'Montserrat', sans-serif;
+  text-transform: capitalize;
+  font-family: 'Calligraffitti', sans-serif;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -252,6 +253,7 @@ body .section-one .screen .main-text h6 {
   color: transparent;
   font-size: 10px;
   font-style: italic;
+  font-family: 'Calligraffitti', sans-serif;
 }
 
 body .section-one .screen .main-text .border {
@@ -607,6 +609,7 @@ body .section-one .skills-screen {
 }
 
 body .section-one .skills-screen .circle-div {
+  position: relative;
   height: 100%;
   width: 100%;
   display: -webkit-box;
@@ -618,6 +621,15 @@ body .section-one .skills-screen .circle-div {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body .section-one .skills-screen .circle-div .skill-description {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  width: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 body .section-one .skills-screen .circle-div .circle {
@@ -653,7 +665,9 @@ body .section-one .skills-screen .circle-div .circle h3:nth-child(odd) {
           flex-direction: row-reverse;
 }
 
-body .section-one .skills-screen .circle-div .circle h3 img {
+body .section-one .skills-screen .circle-div .circle h3 svg {
+  width: 2.5rem;
+  height: 2.5rem;
   padding: .5rem;
   border-radius: 50%;
 }
@@ -662,6 +676,7 @@ body .section-one .skills-screen .circle-div .circle h3 p {
   font-family: 'caveat', sans-serif;
   color: #950740;
   margin: 0 10px;
+  font-weight: 900;
 }
 
 body .section-one .skills-screen .circle-div .circle .gsap img {
@@ -1205,6 +1220,20 @@ body .section-two {
   body .section-one .form-div form {
     width: 50%;
   }
+  body .section-one .skills-screen {
+    width: 100%;
+    height: 100%;
+  }
+  body .section-one .skills-screen .circle-div .circle h3 svg {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem;
+    border-radius: 50%;
+  }
+  body .section-one .skills-screen .circle-div .circle .gsap img {
+    width: 40px;
+    height: 40px;
+  }
   body .section-one .about-screen {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1277,13 +1306,6 @@ body .section-two {
   body .section-one .about-screen .serve .service-container p {
     color: #808080;
     font-weight: 700;
-  }
-  body .section-one .skills-screen .circle-div .circle h3 img {
-    width: 3rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .gsap img {
-    width: 50px;
-    height: 50px;
   }
   body .section-one .project-screen {
     display: -webkit-box;
@@ -1461,79 +1483,6 @@ body .section-two {
   body .section-one .about-screen .serve .service-container p {
     color: #808080;
     font-weight: 500;
-  }
-  body .section-one .skills-screen {
-    width: 100%;
-  }
-  body .section-one .skills-screen .circle-div {
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  body .section-one .skills-screen .circle-div .circle {
-    position: relative;
-    width: 45rem;
-    height: 45rem;
-    border-radius: 100%;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  body .section-one .skills-screen .circle-div .circle h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #61892f;
-  }
-  body .section-one .skills-screen .circle-div .circle .html {
-    top: 22rem;
-    left: 0;
-  }
-  body .section-one .skills-screen .circle-div .circle .css {
-    top: 22rem;
-    left: 42rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .js {
-    top: 20rem;
-    left: 22rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .react {
-    top: 0;
-    left: 20rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .git {
-    top: 9rem;
-    left: 4rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .bs {
-    top: 9rem;
-    left: 33rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .json {
-    top: 13rem;
-    left: 13rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .sass {
-    top: 31rem;
-    left: 21rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .node {
-    top: 34rem;
-    left: 4rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .gsap {
-    top: 34rem;
-    left: 38rem;
-  }
-  body .section-one .skills-screen .circle-div .circle .java {
-    top: 43.5rem;
-    left: 20rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

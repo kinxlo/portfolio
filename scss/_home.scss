@@ -51,8 +51,9 @@ body {
                 li {
                     margin: 0 1em;
                     font-weight: 600;
-                    text-transform: lowercase;
-                    font-family: 'Montserrat', sans-serif;
+                    text-transform: capitalize;
+                    font-family: 'Calligraffitti',
+                    sans-serif;
                     cursor: pointer;
                     transition: all 0.3s ease;
 
@@ -124,6 +125,8 @@ body {
                     color: transparent;
                     font-size: 10px;
                     font-style: italic;
+                    font-family: 'Calligraffitti',
+                    sans-serif;
                 }
 
                 .border {
@@ -488,18 +491,29 @@ body {
 
             .circle-div {
                 // border: 1px solid blue;
+                position: relative;
                 height: 100%;
                 width: 100%;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                // transform: scale(0.7);
+
+                .skill-description {
+                    // display: none;
+                    position: absolute;
+                    top: 50%;
+                    left: 40%;
+                    width: 50%;
+                    transform: translate(-50%, -50%);
+
+                }
 
                 .circle {
 
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     grid-gap: 0 50px;
+                    // transform: scale(0.5);
 
                     h3 {
 
@@ -515,8 +529,10 @@ body {
                             flex-direction: row-reverse;
                         }
 
-                        img {
+                        svg {
                             // border: 1px solid red;
+                            width: 2.5rem;
+                            height: 2.5rem;
                             padding: .5rem;
                             border-radius: 50%;
 
@@ -527,7 +543,7 @@ body {
                             font-family: 'caveat', sans-serif;
                             color: $accent-color-2;
                             margin: 0 10px;
-
+                            font-weight: 900;
                         }
                     }
 
@@ -1256,6 +1272,42 @@ body {
                 }
             }
 
+            .skills-screen {
+                // border: 1px solid red;
+                width: 100%;
+                height: 100%;
+
+                .circle-div {
+
+
+                    .circle {
+
+
+
+                        h3 {
+
+
+
+                            svg {
+                                // border: 1px solid red;
+                                width: 4rem;
+                                height: 4rem;
+                                padding: 1rem;
+                                border-radius: 50%;
+
+                            }
+
+
+                        }
+
+                        .gsap img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+
             // ABOUT AND SERVICES DISPLAY STYLES
             .about-screen {
                 // border: 1px solid green;
@@ -1329,35 +1381,6 @@ body {
                         p {
                             color: $text-color-light;
                             font-weight: 700;
-                        }
-                    }
-                }
-            }
-
-            .skills-screen {
-
-                .circle-div {
-
-
-                    .circle {
-
-
-
-                        h3 {
-
-
-
-                            img {
-                                // border: 1px solid red;
-                                width: 3rem;
-                            }
-
-
-                        }
-
-                        .gsap img {
-                            width: 50px;
-                            height: 50px;
                         }
                     }
                 }
@@ -1591,89 +1614,7 @@ body {
                 }
             }
 
-            .skills-screen {
-                // border: 1px solid red;
-                width: 100%;
 
-                .circle-div {
-                    // border: 1px solid blue;
-                    height: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-
-                    .circle {
-                        position: relative;
-                        // border: 1px solid green;
-                        width: 45rem;
-                        height: 45rem;
-                        border-radius: 100%;
-                        transform: scale(1);
-
-                        h3 {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
-                            color: $g-accent-color-1;
-                        }
-
-                        .html {
-                            top: 22rem;
-                            left: 0;
-                        }
-
-                        .css {
-                            top: 22rem;
-                            left: 42rem;
-                        }
-
-                        .js {
-                            top: 20rem;
-                            left: 22rem;
-                        }
-
-                        .react {
-                            top: 0;
-                            left: 20rem;
-                        }
-
-                        .git {
-                            top: 9rem;
-                            left: 4rem;
-                        }
-
-                        .bs {
-                            top: 9rem;
-                            left: 33rem;
-                        }
-
-                        .json {
-                            top: 13rem;
-                            left: 13rem;
-                        }
-
-                        .sass {
-                            top: 31rem;
-                            left: 21rem;
-                        }
-
-                        .node {
-                            top: 34rem;
-                            left: 4rem;
-                        }
-
-                        .gsap {
-                            top: 34rem;
-                            left: 38rem;
-                        }
-
-                        .java {
-                            top: 43.5rem;
-                            left: 20rem;
-                        }
-                    }
-                }
-            }
 
         }
 
