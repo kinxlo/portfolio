@@ -51,11 +51,12 @@ body {
                 li {
                     margin: 0 1em;
                     font-weight: 600;
+                    font-size: larger;
                     text-transform: capitalize;
-                    font-family: 'Calligraffitti',
-                        sans-serif;
                     cursor: pointer;
                     transition: all 0.3s ease;
+                    font-family: 'Kaushan Script',
+                        cursive;
 
                     &:hover {
                         color: $g-accent-color-1;
@@ -124,30 +125,30 @@ body {
                 h6 {
                     color: transparent;
                     font-size: 10px;
-                    font-style: italic;
-                    font-family: 'Calligraffitti',
-                        sans-serif;
+                    // font-style: italic;
+                    font-family: 'Kaushan Script',
+                        cursive;
+                    letter-spacing: 5px;
                 }
 
-                .border {
-                    border-left: 5px solid $g-accent-color-1;
-                    // border-bottom: 2px solid red;
-                    padding: 2rem 0 2rem 2rem;
+                // .border {
 
-                    // .introduction{
-                    //     height: 25rem;
-                    // }
-                }
+                //     border-left: 5px solid $g-accent-color-1;
+                //     // border-bottom: 2px solid red;
+                //     padding: 2rem 0 2rem 2rem;
+
+                //     // .introduction{
+                //     //     height: 25rem;
+                //     // }
+                // }
 
                 small,
                 #small {
                     display: block;
                     font-size: 10px;
-                    // font-style: italic;
+                    font-style: italic;
                     color: lightgrey;
                     letter-spacing: 1px;
-                    font-family: 'caveat',
-                        cursive;
                 }
 
             }
@@ -161,6 +162,7 @@ body {
                 margin: .5em 0;
                 font-size: $md-length-2;
                 letter-spacing: 1rem;
+                text-transform: uppercase;
 
                 .second-name {
                     display: flex;
@@ -186,9 +188,10 @@ body {
                 p {
                     height: 2rem;
                     font-size: 12px;
-                    font-weight: bold;
+                    // font-weight: bold;
                     letter-spacing: .3rem;
                     color: transparent;
+                    font-family: "Kaushan Script", cursive;
                 }
             }
 
@@ -212,11 +215,6 @@ body {
                 font-weight: bolder;
                 cursor: pointer;
                 z-index: 999;
-
-
-                &:active {
-                    color: red;
-                }
             }
 
         }
@@ -441,7 +439,7 @@ body {
                     display: grid;
                     grid-template-columns: auto;
                     grid-gap: 20px;
-                    grid-row-gap: 50px;
+                    grid-row-gap: 80px;
                     padding: 1rem;
 
                     .service-banner {
@@ -540,7 +538,6 @@ body {
 
                         p {
                             // text-transform: lowercase !important;
-                            font-family: 'caveat', sans-serif;
                             color: $accent-color-2;
                             margin: 0 10px;
                             font-weight: 900;

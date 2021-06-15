@@ -564,15 +564,15 @@ function transitionProject() {
 // ============
 navLists.forEach((nav) => {
   nav.addEventListener('click', () => {
-    if (nav.className == 'about') {
+    if (nav.classList.contains('about')) {
       display(ABOUT)
       //   removeSkillDescription()
       runAboutAnimation()
-    } else if (nav.className == 'contact') {
+    } else if (nav.classList.contains('contact')) {
       display(CONTACT)
       //   removeSkillDescription()
       runFormAnimation()
-    } else if (nav.className == 'skills') {
+    } else if (nav.classList.contains('skills')) {
       display(SKILLS)
       //   showSkillDescription()
       runSkillAnimation()
@@ -633,12 +633,12 @@ function runEntranceAnimation() {
   tl.to('#hello', {
     // duration: 1,
     color: '#000000',
-    text: "Hello, I'm",
+    text: "Hello!, I'm",
     ease: 'none',
   })
   tl.to('#f-name', {
     // duration: 1,
-    color: '#61892f',
+    color: '#e0e0e0',
     text: 'Kingsley',
     ease: 'none',
   })

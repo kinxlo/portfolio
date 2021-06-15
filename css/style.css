@@ -1,7 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Caveat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap");
 /* this is the reset style */
 * {
   margin: 0;
@@ -11,7 +8,7 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 html {
@@ -39,7 +36,8 @@ html p {
 }
 
 html small {
-  font-weight: bolder;
+  font-weight: lighter;
+  font-family: 'VT323', monospace;
 }
 
 html a {
@@ -47,29 +45,28 @@ html a {
   color: #fff;
 }
 
-html .kaligraphy {
-  font-family: 'caveat', cursive;
-}
-
 html .shadow {
-  -webkit-filter: drop-shadow(0px 0px 2px #f5f5f5);
-          filter: drop-shadow(0px 0px 2px #f5f5f5);
+  text-shadow: -11px 11px 22px grey, 11px -11px 22px #ffffff;
 }
 
-html .grow {
+html .shadow-small {
+  text-shadow: -11px 11px 22px #101010, 11px -11px 22px #ffffff;
+}
+
+html .neu-light {
+  border-radius: 150px;
+  background: linear-gradient(225deg, #d4d8db, #fdffff);
+  -webkit-box-shadow: -11px 11px 22px #a8aaad, 11px -11px 22px #ffffff;
+          box-shadow: -11px 11px 22px #a8aaad, 11px -11px 22px #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
-html .grow:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-html .neu-light {
-  background: linear-gradient(225deg, #cacaca, #f0f0f0);
-  -webkit-box-shadow: -18px 18px 36px #969696, 18px -18px 36px #ffffff;
-          box-shadow: -18px 18px 36px #969696, 18px -18px 36px #ffffff;
+html .neu-light:active {
+  border-radius: 150px;
+  background: #ecf0f3;
+  -webkit-box-shadow: inset -11px 11px 22px #a8aaad, inset 11px -11px 22px #ffffff;
+          box-shadow: inset -11px 11px 22px #a8aaad, inset 11px -11px 22px #ffffff;
 }
 
 html .neu-light-soft {
@@ -82,7 +79,7 @@ html .neu-light-soft {
 }
 
 html .icon {
-  color: #61892f !important;
+  color: #0072b1 !important;
 }
 
 @-webkit-keyframes move {
@@ -128,7 +125,7 @@ body .section-one {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  background-color: #e0e0e0;
+  background-color: #ecf0f3;
   width: 100%;
 }
 
@@ -162,7 +159,7 @@ body .section-one .nav-container .avatar img {
 }
 
 body .section-one .nav-container .nav-menu {
-  color: #000;
+  color: #010101;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,19 +169,20 @@ body .section-one .nav-container .nav-menu {
 body .section-one .nav-container .nav-menu li {
   margin: 0 1em;
   font-weight: 600;
+  font-size: larger;
   text-transform: capitalize;
-  font-family: 'Calligraffitti', sans-serif;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  font-family: 'Kaushan Script', cursive;
 }
 
 body .section-one .nav-container .nav-menu li:hover {
-  color: #61892f;
+  color: #0072b1;
 }
 
 body .section-one .nav-container .nav-menu .active {
-  color: #61892f;
+  color: #0072b1;
 }
 
 body .section-one .nav-container .hamburger-menu img {
@@ -199,8 +197,8 @@ body .section-one .nav-container .hamburger-menu img:hover {
 
 body .section-one .screen {
   position: relative;
-  border-top: 1px solid #61892f;
-  border-bottom: 1px solid #61892f;
+  border-top: 1px solid #0072b1;
+  border-bottom: 1px solid #0072b1;
   height: calc(110% - 150px);
   width: 100%;
   max-width: 1000px;
@@ -252,28 +250,24 @@ body .section-one .screen .main-text {
 body .section-one .screen .main-text h6 {
   color: transparent;
   font-size: 10px;
-  font-style: italic;
-  font-family: 'Calligraffitti', sans-serif;
-}
-
-body .section-one .screen .main-text .border {
-  border-left: 5px solid #61892f;
-  padding: 2rem 0 2rem 2rem;
+  font-family: 'Kaushan Script', cursive;
+  letter-spacing: 5px;
 }
 
 body .section-one .screen .main-text small,
 body .section-one .screen .main-text #small {
   display: block;
   font-size: 10px;
+  font-style: italic;
   color: lightgrey;
   letter-spacing: 1px;
-  font-family: 'caveat', cursive;
 }
 
 body .section-one .screen .name {
   margin: .5em 0;
   font-size: 1.25rem;
   letter-spacing: 1rem;
+  text-transform: uppercase;
 }
 
 body .section-one .screen .name .second-name {
@@ -301,9 +295,9 @@ body .section-one .screen .jumbo-text {
 body .section-one .screen .jumbo-text p {
   height: 2rem;
   font-size: 12px;
-  font-weight: bold;
   letter-spacing: .3rem;
   color: transparent;
+  font-family: "Kaushan Script", cursive;
 }
 
 body .section-one .screen .CTA {
@@ -311,8 +305,8 @@ body .section-one .screen .CTA {
   border-radius: 15px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
-  border-left: 1.5px solid #61892f;
-  border-right: 1.5px solid #61892f;
+  border-left: 1.5px solid #0072b1;
+  border-right: 1.5px solid #0072b1;
   text-transform: lowercase;
   letter-spacing: 1px;
   width: -webkit-fit-content;
@@ -322,14 +316,10 @@ body .section-one .screen .CTA {
   margin-bottom: -1em;
   font-size: 10px;
   padding: 1rem;
-  color: #61892f;
+  color: #0072b1;
   font-weight: bolder;
   cursor: pointer;
   z-index: 999;
-}
-
-body .section-one .screen .CTA:active {
-  color: red;
 }
 
 body .section-one .social-section .socials {
@@ -363,7 +353,7 @@ body .section-one .app {
 }
 
 body .section-one .app h5 span {
-  color: #61892f;
+  color: #0072b1;
 }
 
 body .section-one .form-div {
@@ -409,7 +399,7 @@ body .section-one .form-div .arrow-img h6 {
 body .section-one .form-div .form-heading {
   text-align: center;
   margin: 2rem 0;
-  color: #61892f;
+  color: #0072b1;
 }
 
 body .section-one .form-div .form-heading h1 {
@@ -430,7 +420,7 @@ body .section-one .form-div form input,
 body .section-one .form-div form textarea,
 body .section-one .form-div form button {
   background: transparent;
-  border: 1px solid #61892f;
+  border: 1px solid #0072b1;
 }
 
 body .section-one .form-div form .input-div {
@@ -494,7 +484,7 @@ body .section-one .about-screen {
 body .section-one .about-screen h3 {
   font-size: 1.25rem;
   padding: 1rem 0;
-  color: #61892f;
+  color: #0072b1;
   text-align: center;
   margin-top: 2rem;
 }
@@ -556,7 +546,7 @@ body .section-one .about-screen .me p {
 }
 
 body .section-one .about-screen .me p .TS {
-  color: #61892f;
+  color: #0072b1;
 }
 
 body .section-one .about-screen .serve {
@@ -570,7 +560,7 @@ body .section-one .about-screen .serve .service-container {
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   grid-gap: 20px;
-  grid-row-gap: 50px;
+  grid-row-gap: 80px;
   padding: 1rem;
 }
 
@@ -586,8 +576,8 @@ body .section-one .about-screen .serve .service-container .service-banner {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-left: 2px solid #61892f;
-  border-right: 2px solid #61892f;
+  border-left: 2px solid #0072b1;
+  border-right: 2px solid #0072b1;
   padding: 2rem;
 }
 
@@ -610,7 +600,7 @@ body .section-one .about-screen .serve .service-container h5 {
   font-size: 1rem;
   margin: 1.5em 0 .5em;
   text-transform: uppercase;
-  color: #61892f;
+  color: #0072b1;
 }
 
 body .section-one .about-screen .serve .service-container p {
@@ -657,7 +647,7 @@ body .section-one .skills-screen .circle-div .circle {
 }
 
 body .section-one .skills-screen .circle-div .circle h3 {
-  color: #61892f;
+  color: #0072b1;
   margin: 1rem 0;
   text-align: center;
   height: -webkit-fit-content;
@@ -689,8 +679,7 @@ body .section-one .skills-screen .circle-div .circle h3 svg {
 }
 
 body .section-one .skills-screen .circle-div .circle h3 p {
-  font-family: 'caveat', sans-serif;
-  color: #61892f;
+  color: #0072b1;
   margin: 0 10px;
   font-weight: 900;
 }
@@ -750,7 +739,7 @@ body .section-one .project-screen .project-card .description {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: .5rem 1rem;
-  color: #61892f;
+  color: #0072b1;
   background-color: #f5f5f5;
 }
 
@@ -785,7 +774,7 @@ body .section-one .project-screen .project-card .description .controls .icon {
   padding: .2rem;
   margin: 10px;
   font-size: small;
-  color: #61892f !important;
+  color: #0072b1 !important;
   cursor: pointer;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -1063,7 +1052,7 @@ body .section-two {
             justify-content: space-between;
   }
   body .section-one .app h5 span {
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .form-div .arrow-img {
     position: absolute;
@@ -1233,7 +1222,7 @@ body .section-two {
     padding: 1rem;
   }
   body .section-one .app h5 span {
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .form-div .form-heading h1 {
     font-size: 1.5rem;
@@ -1304,7 +1293,7 @@ body .section-two {
     color: #808080;
   }
   body .section-one .about-screen .me p .TS {
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .about-screen .serve {
     text-align: center;
@@ -1322,7 +1311,7 @@ body .section-two {
     font-size: 1rem;
     margin: 1.5em 0 .5em;
     text-transform: uppercase;
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .about-screen .serve .service-container p {
     color: #808080;
@@ -1426,7 +1415,7 @@ body .section-two {
     padding: 1rem;
   }
   body .section-one .app h5 span {
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .form-div .form-heading h1 {
     font-size: 1.5rem;
@@ -1483,7 +1472,7 @@ body .section-two {
     color: #808080;
   }
   body .section-one .about-screen .me p .TS {
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .about-screen .serve {
     text-align: center;
@@ -1504,7 +1493,7 @@ body .section-two {
     font-size: 1rem;
     margin: 1.5em 0 .5em;
     text-transform: uppercase;
-    color: #61892f;
+    color: #0072b1;
   }
   body .section-one .about-screen .serve .service-container p {
     color: #808080;
