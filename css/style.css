@@ -311,8 +311,8 @@ body .section-one .screen .CTA {
   border-radius: 15px;
   border-bottom-right-radius: 5px;
   border-top-left-radius: 5px;
-  border-left: 1.5px solid #950740;
-  border-right: 1.5px solid #950740;
+  border-left: 1.5px solid #61892f;
+  border-right: 1.5px solid #61892f;
   text-transform: lowercase;
   letter-spacing: 1px;
   width: -webkit-fit-content;
@@ -322,7 +322,7 @@ body .section-one .screen .CTA {
   margin-bottom: -1em;
   font-size: 10px;
   padding: 1rem;
-  color: #950740;
+  color: #61892f;
   font-weight: bolder;
   cursor: pointer;
   z-index: 999;
@@ -409,7 +409,7 @@ body .section-one .form-div .arrow-img h6 {
 body .section-one .form-div .form-heading {
   text-align: center;
   margin: 2rem 0;
-  color: #fff;
+  color: #61892f;
 }
 
 body .section-one .form-div .form-heading h1 {
@@ -430,7 +430,7 @@ body .section-one .form-div form input,
 body .section-one .form-div form textarea,
 body .section-one .form-div form button {
   background: transparent;
-  border: 1px solid #950740;
+  border: 1px solid #61892f;
 }
 
 body .section-one .form-div form .input-div {
@@ -444,6 +444,22 @@ body .section-one .form-div form input {
   height: 100%;
   padding: 0 .5em;
   border-radius: 0px;
+}
+
+body .section-one .form-div form input::-webkit-input-placeholder {
+  font-weight: 600;
+}
+
+body .section-one .form-div form input:-ms-input-placeholder {
+  font-weight: 600;
+}
+
+body .section-one .form-div form input::-ms-input-placeholder {
+  font-weight: 600;
+}
+
+body .section-one .form-div form input::placeholder {
+  font-weight: 600;
 }
 
 body .section-one .form-div form .textarea-div {
@@ -478,7 +494,7 @@ body .section-one .about-screen {
 body .section-one .about-screen h3 {
   font-size: 1.25rem;
   padding: 1rem 0;
-  color: #950740;
+  color: #61892f;
   text-align: center;
   margin-top: 2rem;
 }
@@ -570,8 +586,8 @@ body .section-one .about-screen .serve .service-container .service-banner {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-left: 2px solid #950740;
-  border-right: 2px solid #950740;
+  border-left: 2px solid #61892f;
+  border-right: 2px solid #61892f;
   padding: 2rem;
 }
 
@@ -626,8 +642,8 @@ body .section-one .skills-screen .circle-div {
 body .section-one .skills-screen .circle-div .skill-description {
   position: absolute;
   top: 50%;
-  left: 40%;
-  width: 50%;
+  left: 50%;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -674,7 +690,7 @@ body .section-one .skills-screen .circle-div .circle h3 svg {
 
 body .section-one .skills-screen .circle-div .circle h3 p {
   font-family: 'caveat', sans-serif;
-  color: #950740;
+  color: #61892f;
   margin: 0 10px;
   font-weight: 900;
 }
@@ -734,7 +750,7 @@ body .section-one .project-screen .project-card .description {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: .5rem 1rem;
-  color: #950740;
+  color: #61892f;
   background-color: #f5f5f5;
 }
 
@@ -1105,9 +1121,13 @@ body .section-two {
         grid-template-columns: auto auto;
     grid-row-gap: 70px;
   }
-  body .section-one .skills-screen .circle-div {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+  body .section-one .skills-screen .circle-div .skill-description {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
   body .section-one .skills-screen .circle-div .circle h3:nth-child(odd) {
     -webkit-box-orient: horizontal;

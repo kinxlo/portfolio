@@ -53,7 +53,7 @@ body {
                     font-weight: 600;
                     text-transform: capitalize;
                     font-family: 'Calligraffitti',
-                    sans-serif;
+                        sans-serif;
                     cursor: pointer;
                     transition: all 0.3s ease;
 
@@ -126,7 +126,7 @@ body {
                     font-size: 10px;
                     font-style: italic;
                     font-family: 'Calligraffitti',
-                    sans-serif;
+                        sans-serif;
                 }
 
                 .border {
@@ -290,7 +290,7 @@ body {
             .form-heading {
                 text-align: center;
                 margin: 2rem 0;
-                color: #fff;
+                color: $accent-color-2;
 
                 h1 {
                     font-size: $md-length-1;
@@ -333,9 +333,9 @@ body {
                     border-radius: 0px;
 
 
-                    // &::placeholder{
-                    //     font-weight: bold;
-                    // }
+                    &::placeholder {
+                        font-weight: 600;
+                    }
                 }
 
                 .textarea-div {
@@ -502,8 +502,8 @@ body {
                     // display: none;
                     position: absolute;
                     top: 50%;
-                    left: 40%;
-                    width: 50%;
+                    left: 50%;
+                    width: 100%;
                     transform: translate(-50%, -50%);
 
                 }
@@ -1096,7 +1096,15 @@ body {
             .skills-screen {
 
                 .circle-div {
-                    transform: scale(0.9);
+                    .skill-description {
+                        // display: none;
+                        position: absolute;
+                        top: 50%;
+                        left: 40%;
+                        width: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
 
                     .circle {
 
@@ -1279,7 +1287,7 @@ body {
 
                 .circle-div {
 
-
+                    
                     .circle {
 
 

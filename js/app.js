@@ -167,13 +167,13 @@ const CONTACT = `
                     </div>
                     <section class="form">
                         <div class="input-div">
-                            <input type="text" placeholder="NAME" required>
+                            <input type="text" placeholder="Name" required>
                         </div>
                         <div class="input-div">
-                            <input type="email" placeholder="EMAIL" required>
+                            <input type="email" placeholder="Email" required>
                         </div>
                         <div class="textarea-div">
-                            <textarea name="" id="" placeholder="MESSAGE" required></textarea>
+                            <textarea name="" id="" placeholder="Message" required></textarea>
                         </div>
                         <button>Submit</button>
                     </section>
@@ -683,7 +683,12 @@ function runSkillAnimation() {
   let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
   tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
   tl.to('.circle', { duration: 1, scale: 0.8 })
-  tl.to('.circle', { duration: 1, x: 420, y: '-200' })
+
+  if (screen.width >= 1200) {
+    tl.to('.circle', { duration: 1, x: '130%', y: '-40%' })
+  } else {
+    tl.to('.circle', { duration: 1, x: '0', y: '-50%' })
+  }
   tl.from('.skill-description', { duration: 1, opacity: 0 })
 }
 
