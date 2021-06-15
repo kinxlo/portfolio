@@ -532,7 +532,33 @@ function showSkillDescription() {
 //   sectionTwo.style.backgroundImage = `url('../assets/images/binary-1254502.svg')`
 //   skillDescription.style.display = `none`
 // }
+// get the overview of the project technology
+function getProjectStack() {
+  const cards = document.querySelectorAll('.project-card')
+  cards.forEach((card) => {
+    const stack = card.querySelector('.stack')
+    const stackIcon = card.querySelector('.stack-icon')
+    const backIcon = card.querySelector('.back-icon')
 
+    stackIcon.addEventListener('click', () => {
+      stack.classList.add('stack-active')
+    })
+    backIcon.addEventListener('click', () => {
+      stack.classList.remove('stack-active')
+    })
+  })
+}
+
+function transitionProject() {
+  const cardImgs = document.querySelectorAll('.project-card img')
+  cardImgs.forEach((cardImg) => {
+    const card = cardImg.parentNode.parentNode
+    cardImg.addEventListener('click', (e) => {
+      // console.log();
+      card.classList.toggle('grow')
+    })
+  })
+}
 //=============
 // PAGE DISPLAY
 // ============
@@ -570,33 +596,6 @@ projectsBtns.forEach((projectBtn) => {
   })
 })
 
-// get the overview of the project technology
-function getProjectStack() {
-  const cards = document.querySelectorAll('.project-card')
-  cards.forEach((card) => {
-    const stack = card.querySelector('.stack')
-    const stackIcon = card.querySelector('.stack-icon')
-    const backIcon = card.querySelector('.back-icon')
-
-    stackIcon.addEventListener('click', () => {
-      stack.classList.add('stack-active')
-    })
-    backIcon.addEventListener('click', () => {
-      stack.classList.remove('stack-active')
-    })
-  })
-}
-
-function transitionProject() {
-  const cardImgs = document.querySelectorAll('.project-card img')
-  cardImgs.forEach((cardImg) => {
-    const card = cardImg.parentNode.parentNode
-    cardImg.addEventListener('click', () => {
-      card.classList.toggle('grow')
-    })
-  })
-}
-
 // ===================================================================
 // CREATING ACTIVE NAVIGATION
 
@@ -622,41 +621,41 @@ for (var i = 0; i < navLists.length; i++) {
 // entrance animation
 function runEntranceAnimation() {
   let tl = gsap.timeline({
-    defaults: { duration: 1 },
+    defaults: { duration: 0.7 },
     //   repeat: -1,
     //   yoyo: true,
   })
 
   tl.from('.border', { borderWidth: 0 })
-  tl.from('small', { duration: 2, opacity: 0, color: 'red' })
+  tl.from('small', { opacity: 0, color: 'red' })
   tl.from('.introduction', { delay: 1, opacity: 0, x: '-50px' })
 
   tl.to('#hello', {
-    duration: 1,
+    // duration: 1,
     color: '#000000',
     text: "Hello, I'm",
     ease: 'none',
   })
   tl.to('#f-name', {
-    duration: 1,
+    // duration: 1,
     color: '#61892f',
     text: 'Kingsley',
     ease: 'none',
   })
   tl.to('#s-name', {
-    duration: 1,
+    // duration: 1,
     color: '#61892f',
     text: 'Solomon',
     ease: 'none',
   })
   tl.to('#your', {
-    duration: 1,
+    // duration: 1,
     color: '#000000',
     text: 'Your',
     ease: 'none',
   })
   tl.to('#job', {
-    duration: 1,
+    // duration: 1,
     color: '#000000',
     text: 'Frontend Developer / Instructor',
     ease: 'none',
@@ -675,19 +674,33 @@ function runEntranceAnimation() {
     },
     '-=0.1'
   )
-  tl.from('.CTA', { duration: 3, opacity: 0, ease: 'power2' })
+
+  tl.from('.avatar', {
+    duration: 0.3,
+    opacity: 0,
+    scale: '0.1',
+    stagger: 0.2,
+    ease: 'bounce.out',
+  })
+  tl.from('.project-btn', { duration: 3, opacity: 0, ease: 'power2' })
 }
 
 // run skill animations
 function runSkillAnimation() {
-  let tl = gsap.timeline({ defaults: { duration: 2, yoyo: true } })
-  tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.5' })
-  tl.to('.circle', { duration: 1, scale: 0.8 })
+  let screenWidth = screen.width
+  let tl = gsap.timeline({ defaults: { duration: 0.5, yoyo: true } })
+  tl.from('.tool', { opacity: 0, scale: 0, stagger: '0.2' })
+  tl.to('.circle', { scale: 0.8 })
 
-  if (screen.width >= 1200) {
-    tl.to('.circle', { duration: 1, x: '130%', y: '-40%' })
+  // the switch statement might be inefficient at this point!!!...yes Inefficient
+  if (screenWidth >= 500 && screenWidth <= 698) {
+    tl.to('.circle', { x: '0', y: '-60%' })
+  } else if (screenWidth >= 700 && screenWidth < 1200) {
+    tl.to('.circle', { x: '70%', y: '-50%' })
+  } else if (screenWidth >= 1200) {
+    tl.to('.circle', { scale: '0.7', x: '95%', y: '-25%' })
   } else {
-    tl.to('.circle', { duration: 1, x: '0', y: '-50%' })
+    tl.to('.circle', { scale: '0.6', x: '0', y: '-45%' })
   }
   tl.from('.skill-description', { duration: 1, opacity: 0 })
 }
