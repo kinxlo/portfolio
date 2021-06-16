@@ -5,6 +5,50 @@ body {
     display: flex;
     font-size: 12px;
 
+    .triangle {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        width: 80%;
+        height: 1%;
+        // border: 1px solid red;
+        // background-color: red;
+
+        border-radius: 100px;
+        background: #ecf0f3;
+        box-shadow: -5px 5px 10px #acafb1,
+            5px -5px 10px #ffffff;
+
+        &:nth-child(1) {
+            left: 10%;
+        }
+
+        &:nth-child(2) {
+            top: 90%;
+            left: 10%;
+        }
+
+        // &:nth-child(3) {
+        //     top: 90%;
+        //     left: 10%;
+        // }
+
+        // &:nth-child(4) {
+        //     top: 10%;
+        //     left: 50%;
+        // }
+
+        // &:nth-child(5) {
+        //     top: 10%;
+        //     left: 50%;
+        // }
+
+        // &:nth-child(6) {
+        //     top: 10%;
+        //     left: 50%;
+        // }
+    }
+
     .section-one {
         // border: 1px solid blue;
         display: flex;
@@ -83,8 +127,8 @@ body {
 
         .screen {
             position: relative;
-            border-top: 1px solid $g-accent-color-1;
-            border-bottom: 1px solid $g-accent-color-1;
+            // border-top: 1px solid $g-accent-color-1;
+            // border-bottom: 1px solid $g-accent-color-1;
             height: calc(110% - 150px);
             width: 100%;
             max-width: 1000px;
@@ -188,7 +232,6 @@ body {
                 p {
                     height: 2rem;
                     font-size: 12px;
-                    // font-weight: bold;
                     letter-spacing: .3rem;
                     color: transparent;
                     font-family: "Kaushan Script", cursive;
@@ -211,7 +254,7 @@ body {
                 margin-bottom: -1em;
                 font-size: 10px;
                 padding: 1rem;
-                color: $accent-color-2;
+                color: $accent-color-2 !important;
                 font-weight: bolder;
                 cursor: pointer;
                 z-index: 999;
@@ -350,12 +393,12 @@ body {
                     }
                 }
 
-                svg{
+                svg {
                     width: 50px;
                     height: 50px;
                     padding: 1rem;
                 }
-                
+
             }
         }
 
@@ -618,7 +661,7 @@ body {
                         align-items: baseline;
 
                         .small {
-                            font-size: small;
+                            font-size: large;
                         }
 
                         .icon {
@@ -683,10 +726,12 @@ body {
                             background: #f5f5f5;
                             box-shadow: 5px 5px 5px #dadada,
                                 -5px -5px 5px #ffffff;
+                            font-size: 1rem;
                         }
 
                         .back-icon {
                             cursor: pointer;
+                            font-size: 1.2rem;
                         }
                     }
 
@@ -861,7 +906,7 @@ body {
                     position: relative;
                     // border: 2px solid $g-accent-color-1;
                     width: 70%;
-                    height: 20rem;
+                    height: 25rem;
                     border-radius: 5px;
                     overflow: hidden;
                     margin: 0 auto;
@@ -1394,8 +1439,10 @@ body {
 
             .project-screen {
                 display: flex;
+                align-items: center;
                 grid-gap: 10px;
                 height: 100%;
+                transform: scale(0.8);
 
                 .project-card {
                     position: relative;
@@ -1419,12 +1466,12 @@ body {
                     .description {
                         // border: 1px solid blue;
                         height: 40%;
-                        padding: 3rem;
+                        padding: 2rem;
 
                         .controls {
 
                             .icon {
-                                font-size: medium;
+                                font-size: large;
                             }
 
                         }
@@ -1449,9 +1496,7 @@ body {
                             }
 
                             li {
-                                display: inline;
-                                margin: 0 .5rem;
-                                font-weight: bold;
+                                font-size: large;
                             }
 
 
@@ -1625,6 +1670,78 @@ body {
                     }
                 }
             }
+
+            .project-screen {
+                display: flex;
+                align-items: center;
+                grid-gap: 20px;
+                height: 100%;
+
+                .project-card {
+                    width: 50%;
+
+                    .description {
+                        // border: 1px solid blue;
+                        height: 40%;
+                        padding: 3rem;
+
+                        .controls {
+
+                            .icon,
+                            .small {
+                                font-size: x-large;
+                            }
+
+                        }
+
+                        .title {
+                            h1 {
+                                font-size: $md-length-1;
+                                letter-spacing: 2px;
+                            }
+
+                            p {
+                                font-size: 16px;
+                                font-weight: 300;
+                                margin: 5px 0;
+                            }
+                        }
+
+                        .stack {
+
+                            ul {
+                                margin: 2rem 0;
+                            }
+
+                            li {
+                                display: inline;
+                                margin: 0 .5rem;
+                                font-weight: bold;
+                            }
+
+                            .view,
+                            .back-icon {
+                                font-size: x-large;
+                            }
+
+                        }
+
+
+                    }
+
+
+                }
+
+                .grow {
+                    flex: 5;
+
+                    .p-img-container {
+                        height: 60%;
+                    }
+                }
+
+            }
+
 
         }
 
