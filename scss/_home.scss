@@ -310,9 +310,8 @@ body {
                 input,
                 textarea,
                 button {
-                    // border: none;
+                    border: none;
                     background: transparent;
-                    border: 1px solid $accent-color-2;
                     // color: #fff;
                     // background: #222629;
 
@@ -351,11 +350,12 @@ body {
                     }
                 }
 
-                button {
-                    width: 15em;
-                    height: 3em;
+                svg{
+                    width: 50px;
+                    height: 50px;
+                    padding: 1rem;
                 }
-
+                
             }
         }
 

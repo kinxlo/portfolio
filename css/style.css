@@ -46,7 +46,7 @@ html a {
 }
 
 html .shadow {
-  text-shadow: -11px 11px 22px grey, 11px -11px 22px #ffffff;
+  text-shadow: -8px 8px 8px #5a5b5c, 8px -8px 8px #ffffff;
 }
 
 html .shadow-small {
@@ -76,6 +76,13 @@ html .neu-light-soft {
   background: #e0e0e0;
   -webkit-box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
           box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
+}
+
+html .form-neu-light {
+  border-radius: 12px;
+  background: #ecf0f3;
+  -webkit-box-shadow: inset -11px 11px 9px #b3b6b9, inset 11px -11px 9px #ffffff;
+          box-shadow: inset -11px 11px 9px #b3b6b9, inset 11px -11px 9px #ffffff;
 }
 
 html .icon {
@@ -419,8 +426,8 @@ body .section-one .form-div form .form {
 body .section-one .form-div form input,
 body .section-one .form-div form textarea,
 body .section-one .form-div form button {
+  border: none;
   background: transparent;
-  border: 1px solid #0072b1;
 }
 
 body .section-one .form-div form .input-div {
@@ -465,9 +472,10 @@ body .section-one .form-div form .textarea-div textarea {
   padding: .5em;
 }
 
-body .section-one .form-div form button {
-  width: 15em;
-  height: 3em;
+body .section-one .form-div form svg {
+  width: 50px;
+  height: 50px;
+  padding: 1rem;
 }
 
 body .section-one .about-screen {

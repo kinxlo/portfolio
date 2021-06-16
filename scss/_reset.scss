@@ -53,13 +53,15 @@ html {
   .kaligraphy {}
 
   .shadow {
-    text-shadow: -11px 11px 22px grey,
-    11px -11px 22px #ffffff;
-    
+    // text-shadow: -11px 11px 22px grey,
+    //   11px -11px 22px #ffffff;
+    text-shadow: -8px 8px 8px #5a5b5c,
+    8px -8px 8px #ffffff;
   }
-  .shadow-small{
+
+  .shadow-small {
     text-shadow: -11px 11px 22px #101010,
-    11px -11px 22px #ffffff;
+      11px -11px 22px #ffffff;
   }
 
   .grow {
@@ -92,6 +94,13 @@ html {
     background: #e0e0e0;
     box-shadow: -10px 10px 20px #a6a6a6,
       10px -10px 20px #ffffff;
+  }
+
+  .form-neu-light {
+    border-radius: 12px;
+    background: #ecf0f3;
+    box-shadow: inset -11px 11px 9px #b3b6b9,
+      inset 11px -11px 9px #ffffff;
   }
 
   .icon {
