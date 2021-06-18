@@ -8,7 +8,7 @@
           box-sizing: border-box;
   text-decoration: none;
   list-style: none;
-  font-family: 'Noto Sans', sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 html {
@@ -19,6 +19,11 @@ html {
 html body {
   color: #000;
   overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 html h1,
@@ -37,7 +42,7 @@ html p {
 
 html small {
   font-weight: lighter;
-  font-family: 'VT323', monospace;
+  font-family: 'VT323', monospace;
 }
 
 html a {
@@ -46,18 +51,18 @@ html a {
 }
 
 html .shadow {
-  text-shadow: -8px 8px 8px #5a5b5c, 8px -8px 8px #ffffff;
+  text-shadow: -8px 8px 8px #5a5b5c, 8px -8px 8px #ffffff;
 }
 
 html .shadow-small {
-  text-shadow: -11px 11px 22px #101010, 11px -11px 22px #ffffff;
+  text-shadow: -11px 11px 22px #101010, 11px -11px 22px #ffffff;
 }
 
 html .neu-light {
   border-radius: 150px;
   background: linear-gradient(225deg, #d4d8db, #fdffff);
-  -webkit-box-shadow: -11px 11px 22px #a8aaad, 11px -11px 22px #ffffff;
-          box-shadow: -11px 11px 22px #a8aaad, 11px -11px 22px #ffffff;
+  -webkit-box-shadow: -11px 11px 22px #a8aaad, 11px -11px 22px #ffffff;
+          box-shadow: -11px 11px 22px #a8aaad, 11px -11px 22px #ffffff;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -65,8 +70,8 @@ html .neu-light {
 html .neu-light:active {
   border-radius: 150px;
   background: #ecf0f3;
-  -webkit-box-shadow: inset -11px 11px 22px #a8aaad, inset 11px -11px 22px #ffffff;
-          box-shadow: inset -11px 11px 22px #a8aaad, inset 11px -11px 22px #ffffff;
+  -webkit-box-shadow: inset -11px 11px 22px #a8aaad, inset 11px -11px 22px #ffffff;
+          box-shadow: inset -11px 11px 22px #a8aaad, inset 11px -11px 22px #ffffff;
 }
 
 html .neu-light:hover {
@@ -79,15 +84,15 @@ html .neu-light-soft {
   border-top-left-radius: 5px;
   border-bottom-right-radius: 5px;
   background: #e0e0e0;
-  -webkit-box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
-          box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
+  -webkit-box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
+          box-shadow: -10px 10px 20px #a6a6a6, 10px -10px 20px #ffffff;
 }
 
 html .form-neu-light {
   border-radius: 12px;
   background: #ecf0f3;
-  -webkit-box-shadow: inset -11px 11px 9px #b3b6b9, inset 11px -11px 9px #ffffff;
-          box-shadow: inset -11px 11px 9px #b3b6b9, inset 11px -11px 9px #ffffff;
+  -webkit-box-shadow: inset -11px 11px 9px #b3b6b9, inset 11px -11px 9px #ffffff;
+          box-shadow: inset -11px 11px 9px #b3b6b9, inset 11px -11px 9px #ffffff;
 }
 
 html .icon {
@@ -115,33 +120,7 @@ html .icon {
 }
 
 body {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   font-size: 12px;
-}
-
-body .triangle {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 1%;
-  border-radius: 100px;
-  background: #ecf0f3;
-  -webkit-box-shadow: -5px 5px 10px #acafb1, 5px -5px 10px #ffffff;
-          box-shadow: -5px 5px 10px #acafb1, 5px -5px 10px #ffffff;
-}
-
-body .triangle:nth-child(1) {
-  left: 10%;
-}
-
-body .triangle:nth-child(2) {
-  top: 90%;
-  left: 10%;
 }
 
 body .section-one {
@@ -160,6 +139,24 @@ body .section-one {
           flex: 1;
   background-color: #ecf0f3;
   width: 100%;
+}
+
+body .section-one .circuit {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: drop-shadow(-10px 10px 10px grey) blur(0.5px);
+          filter: drop-shadow(-10px 10px 10px grey) blur(0.5px);
+}
+
+body .section-one .circuit-1-div {
+  top: 40%;
+  left: -65%;
+}
+
+body .section-one .circuit-2-div {
+  top: -40%;
+  left: 65%;
 }
 
 body .section-one .nav-container {

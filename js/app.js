@@ -638,13 +638,13 @@ function runEntranceAnimation() {
   })
   tl.to('#f-name', {
     // duration: 1,
-    color: '#e0e0e0',
+    color: '#0072b1',
     text: 'Kingsley',
     ease: 'none',
   })
   tl.to('#s-name', {
     // duration: 1,
-    color: '#e0e0e0',
+    color: '#0072b1',
     text: 'Solomon',
     ease: 'none',
   })
@@ -683,6 +683,7 @@ function runEntranceAnimation() {
     ease: 'bounce.out',
   })
   tl.from('.project-btn', { duration: 3, opacity: 0, ease: 'power2' })
+  tl.from('#circuit', {duration: 5, stroke: '#ffffff', repeat: -1, yoyo: true})
 }
 
 // run skill animations
